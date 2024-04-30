@@ -15,11 +15,23 @@
 
 2024년 05월 01일  ~ 2024년 05월 03일 10시
 
+
 ## Project board
+
+https://github.com/orgs/APP-iOS5th/projects/21
 
 ## 칼로리 계산앱
 
 ---
+
+### 버전 정보
+
+
+- **Xcode:** 15.3
+- **Swift:** 5.10
+- **iOS:** 17.4
+
+
 
 ## 주요 기능
 
