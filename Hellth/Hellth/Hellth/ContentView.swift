@@ -1,16 +1,34 @@
-
-
 import SwiftUI
+
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                        
+                    }
+                Text("Community")
+                    .tabItem {
+                        Label("Community", systemImage: "square.grid.2x2")
+                        
+                    }
+                
+                Text("Timer")
+                    .tabItem {
+                        Label("Timer", systemImage: "clock")
+                        
+                    }
+                
+                Text("Profile")
+                    .tabItem {
+                        Label("Profile", systemImage: "person")
+                    }
+            }
+            .accentColor(.green)
         }
-        .padding()
     }
 }
 
