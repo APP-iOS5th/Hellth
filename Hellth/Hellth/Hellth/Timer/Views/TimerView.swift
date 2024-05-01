@@ -10,9 +10,10 @@ import SwiftUI
 struct TimerView: View {
     var body: some View {
         NavigationStack {
-            NavigationLink {
-                
+            NavigationLink(destination: FastingSettingView()) {
+                Text("단식 타이머 만들기")
             }
+            .navigationTitle("단식 타이머")
         }
     }
 }

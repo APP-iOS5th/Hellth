@@ -16,7 +16,7 @@ struct ContentView: View {
                         
                     }
                 
-                Text("Timer")
+                TimerView()
                     .tabItem {
                         Label("Timer", systemImage: "clock")
                         
@@ -27,7 +27,7 @@ struct ContentView: View {
                         Label("Profile", systemImage: "person")
                     }
             }
-            .accentColor(.green)
+//            .accentColor(.green)
         }
     }
 }
