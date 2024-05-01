@@ -12,6 +12,7 @@ struct FastingSettingView: View {
     @State private var startHour = 0
     @State private var startMinute = 0
     @State private var durationHour = 0
+    
     private func oneMonthFromToday() -> Date {
         let calendar = Calendar.current
         
@@ -30,6 +31,10 @@ struct FastingSettingView: View {
                             .frame(width: 300)
                             .datePickerStyle(GraphicalDatePickerStyle())
                             .labelsHidden()
+                            .onChange(of: startDate) {
+                                newValue in
+                                startDate = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: newValue) ?? Date()
+                            }
                     }
                     Section(header:
                                 Text("시작 시간")
@@ -49,9 +54,10 @@ struct FastingSettingView: View {
                                 Text("시")
                             }
                             HStack {
-                                Picker(selection: $startMinute, label: Text("Minute")) {
+                                Picker(selection: $startMinute , label: Text("Minute")) {
                                     ForEach(0..<6) { minute in
                                         Text("\(minute * 10)")
+                                            .tag(minute * 10)
                                     }
                                 }
                                 .frame(width: 200)
@@ -74,8 +80,8 @@ struct FastingSettingView: View {
                         }
                         .padding(.bottom, 20)
                     }
-                    Button {
-                        
+                    NavigationLink {
+                        TimerActionView(startDate: startDate, startHour: startHour, startMinute: startMinute, durationHour: durationHour)
                     } label: {
                         Text("단식 시작")
                     }
