@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PostSummaryView: View {
     var post: Post
-    var category: String
     private let dateFormat: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY년 M월 d일"
@@ -24,6 +23,7 @@ struct PostSummaryView: View {
                     Text("\(post.category)")
                         .font(.headline)
                     Text("· \(post.username ?? "익명") · \(post.date, formatter: dateFormat)")
+                        .font(.subheadline)
                 }
                 .padding(.bottom, 30)
                 // 글내용
@@ -48,5 +48,5 @@ struct PostSummaryView: View {
 
 
 #Preview {
-    PostSummaryView(post: Post.sample[0], category: "다이어트")
+    PostSummaryView(post: Post.sample[0])
 }

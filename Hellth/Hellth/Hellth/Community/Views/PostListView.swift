@@ -43,6 +43,8 @@ struct PostListView: View {
         }
     }
     
+    @State var isSheetShowing: Bool = false
+    
     var body: some View {
         NavigationStack {
             HStack {
@@ -65,13 +67,13 @@ struct PostListView: View {
             .padding([.leading, .bottom], 15)
             // 카테고리별 게시글 리스트
             List {
-                ForEach(filteredPosts) { post in
+                ForEach(filteredPosts, id: \.self) { post in
                     ZStack {
-                        NavigationLink(destination: PostDetailView(post: post)) {
+                        NavigationLink(destination: PostDetailView(post: post, comment: Comment.sample[0])) {
                             EmptyView()
                         }
                         .opacity(0)
-                        PostSummaryView(post: post, category: post.category)
+                        PostSummaryView(post: post)
                             // 공유 및 삭제
                             .contextMenu {
                                 ShareLink(item: post.title)
@@ -102,10 +104,13 @@ struct PostListView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("글쓰기") {
                         // add post
-                        
+                        isSheetShowing = true
                     }
                     .padding([.top, .trailing], 10)
                 }
+            }
+            .sheet(isPresented: $isSheetShowing) {
+                AddPostView()
             }
             
         }
