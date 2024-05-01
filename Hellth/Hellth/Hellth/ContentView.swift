@@ -27,7 +27,6 @@ struct ContentView: View {
                         Label("Profile", systemImage: "person")
                     }
             }
-            .accentColor(.green)
         }
     }
 }
