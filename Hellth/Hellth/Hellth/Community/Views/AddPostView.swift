@@ -9,7 +9,22 @@ import SwiftUI
 
 struct AddPostView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            // 새 게시글 or 카테고리
+            
+            // 카테고리
+            
+            // 글제목
+            
+            // 글씨 꾸미기
+            
+            // 글내용
+            
+            // 이미지 업로드
+            
+            // 올리기 버튼
+            
+        }
     }
 }
 

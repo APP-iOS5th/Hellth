@@ -9,7 +9,28 @@ import SwiftUI
 
 struct PostDetailView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            // 카테고리
+            
+            // 글제목
+            
+            // 사용자 정보, 작성 시간
+            
+            // 조회수, 공감수, 댓글수
+            
+            // 글내용
+            
+            // 공감 버튼
+            
+            // 댓글 수
+            
+            // 댓글 작성자 정보, 작성 시간
+            
+            // 댓글 내용
+            
+            // 대댓글 수(버튼)
+            
+        }
     }
 }
 
