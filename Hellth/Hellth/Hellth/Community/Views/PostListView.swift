@@ -62,34 +62,34 @@ struct PostListView: View {
                 .padding(5)
                 Spacer()
             }
-            // 타이틀
-            .navigationTitle("커뮤니티")
-            .padding(.leading, 20)
+            .padding([.leading, .bottom], 15)
             // 카테고리별 게시글 리스트
             List(filteredPosts) { post in
-                NavigationLink(value: post) {
-                    PostSummaryView(post: post, category: post.category)
+                // 화살
+                ScrollView {
+                    NavigationLink(value: post) {
+                        PostSummaryView(post: post, category: post.category)
+                    }
+                    
                 }
-                
-                
+                .listRowSeparator(.hidden)
             }
             .navigationDestination(for: Post.self) { post in
                 PostDetailView(post: post)
             }
             .listStyle(.plain)
-            
-            
+            .buttonStyle(.plain)
+            // 타이틀
+            .navigationTitle("커뮤니티")
+
             // 검색창
-            
-            // 게시글 리스트
-            
-            
             
             // 게시글 추가 버튼
             
             // 게시글 삭제
             
         }
+        
     }
     
     // 카테고리 버튼색 지정

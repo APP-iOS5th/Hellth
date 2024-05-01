@@ -10,7 +10,7 @@ struct ContentView: View {
                         Label("Home", systemImage: "house")
                         
                     }
-                Text("Community")
+                PostListView(posts: Post.sample)
                     .tabItem {
                         Label("Community", systemImage: "square.grid.2x2")
                         
@@ -27,7 +27,7 @@ struct ContentView: View {
                         Label("Profile", systemImage: "person")
                     }
             }
-            .accentColor(.green)
+//            .accentColor(.green)
         }
     }
 }

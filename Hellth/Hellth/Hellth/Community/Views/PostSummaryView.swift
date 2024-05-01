@@ -43,7 +43,6 @@ struct PostSummaryView: View {
         .padding(30)
         .overlay(RoundedRectangle(cornerRadius: 10)
             .stroke(.gray, lineWidth: 2))
-        .padding()
     }
 }
 
