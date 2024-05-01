@@ -11,7 +11,7 @@ struct PostListView: View {
     @State var isTotalPressed: Bool = true
     @State var isExercisePressed: Bool = false
     @State var isDietPressed: Bool = false
-    
+    // 선택한 카테고리
     @State var category: Category = .total {
         didSet {
             switch category {
@@ -32,6 +32,16 @@ struct PostListView: View {
     }
     
     var posts: [Post]
+    // 카테고리별 게시글
+    var filteredPosts: [Post] {
+        if category == .total {
+            return posts
+        } else {
+            return posts.filter {
+                $0.category == category.rawValue
+            }
+        }
+    }
     
     var body: some View {
         NavigationStack {
@@ -41,8 +51,6 @@ struct PostListView: View {
                     Button (action: {
                         // 클릭 시 카테고리 필터링
                         category = cat
-                        NavigationLink(value: )
-//                        showPostSummary(postCategory: cat.rawValue)
                     }) {
                         Text("\(cat.rawValue)")
                             .padding(5)
@@ -57,6 +65,17 @@ struct PostListView: View {
             // 타이틀
             .navigationTitle("커뮤니티")
             .padding(.leading, 20)
+            // 카테고리별 게시글 리스트
+            List(filteredPosts) { post in
+                NavigationLink(value: post) {
+                    PostSummaryView(post: post, category: post.category)
+                }
+                
+            }
+            .navigationDestination(for: Post.self) { post in
+                PostDetailView(post: post)
+            }
+            .listStyle(.insetGrouped)
             
             // 검색창
             
@@ -82,13 +101,6 @@ struct PostListView: View {
         case .diet:
             return isDietPressed ? .blue : .black
         }
-    }
-    
-    func showPostSummary(postCategory: String) -> some View {
-        List(posts) { post in
-            PostSummaryView(post: post, category: postCategory)
-        }
-//        .listStyle(.insetGrouped)
     }
 }
 

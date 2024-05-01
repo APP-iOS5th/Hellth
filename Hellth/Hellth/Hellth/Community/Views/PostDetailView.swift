@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PostDetailView: View {
+    var post: Post
+    
     var body: some View {
         VStack {
             // 카테고리
@@ -35,5 +37,5 @@ struct PostDetailView: View {
 }
 
 #Preview {
-    PostDetailView()
+    PostDetailView(post: Post.sample[0])
 }
