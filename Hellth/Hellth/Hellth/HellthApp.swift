@@ -5,6 +5,14 @@ struct HellthApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
+            
+            
+            
+            
+            
+            
+            
         }
     }
 }
