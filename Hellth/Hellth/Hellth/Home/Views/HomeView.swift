@@ -14,24 +14,7 @@ struct HomeView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     Text("Food Record")
-                    ZStack {
-                        Circle()
-                            .stroke(Color.gray.opacity(0.2),lineWidth: 20)
-                        
-                        VStack {
-                            Spacer()
-                            Text("Goal: 1000")
-                            Spacer()
-                            Text("Current Calorie: 300")
-                            Spacer()
-                            Text("Remain Calorie: 700")
-                            Spacer()
-                        }
-                        Circle()
-                            .stroke()
-                        
-                    }
-                    .padding()
+                    CalorieCircleView()
                     
                     VStack(spacing: 20) {
                         
