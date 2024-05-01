@@ -7,6 +7,8 @@ struct HomeView: View {
         Food(name: "Rice", calories: 130, carbohydrates: 28, protein: 3, fat: 0),
         Food(name: "Chicken", calories: 165, carbohydrates: 0, protein: 31, fat: 3)
     ]
+    @State private var isShowingSheet = false
+    
     var body: some View {
         ZStack {
             ScrollView {
@@ -66,7 +68,7 @@ struct HomeView: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Button(action: { print("Add Button") }) {
+                    Button(action: { isShowingSheet.toggle() }) {
                         Image(systemName: "plus")
                             .font(.title)
                             .tint(.green)
@@ -76,12 +78,13 @@ struct HomeView: View {
                                 Circle().stroke(Color.green)
                             )
                     }
+                    .sheet(isPresented: $isShowingSheet, content: {
+                        AddCalorieView()
+                    })
                 }
                 .padding()
             }
-            
         }
-        
     }
 }
 
