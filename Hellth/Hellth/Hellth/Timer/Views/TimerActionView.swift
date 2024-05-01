@@ -16,12 +16,13 @@ struct TimerActionView: View {
     var currentDate = Date.now
     
     var body: some View {
+        let startDateTime = startDate.addingTimeInterval(TimeInterval(startHour*60*60 + startMinute*60))
         VStack {
-//            Text("Start: \(startDate.formatted(.dateTime.day().month().year().locale(Locale(identifier: "ko_KR")))) \(startHour) 시 \(startMinute)분")
+            Text("\(startDate)")
             Text("Start: \(startDate.formatted(.dateTime.day().month().year())) \(startHour) 시 \(startMinute)분")
             Text("Duration Hour: \(durationHour)")
-            Text("Start: \(startDate.addingTimeInterval(TimeInterval(startHour*60*60 + startMinute*60))), \nCurrent: \(currentDate)")
-            Text("\(currentDate.timeIntervalSince(startDate) )")
+            Text("Start: \(startDateTime), \nCurrent: \(currentDate)")
+            Text("\(currentDate.timeIntervalSince(startDateTime) )")
         }
     }
 }
