@@ -31,7 +31,7 @@ struct PostListView: View {
         }
     }
     
-    var posts: [Post]
+    @State var posts: [Post]
     // 카테고리별 게시글
     var filteredPosts: [Post] {
         if category == .total {
@@ -64,18 +64,31 @@ struct PostListView: View {
             }
             .padding([.leading, .bottom], 15)
             // 카테고리별 게시글 리스트
-            List(filteredPosts) { post in
-                // 화살
-                ScrollView {
-                    NavigationLink(value: post) {
+            List {
+                ForEach(filteredPosts) { post in
+                    ZStack {
+                        NavigationLink(destination: PostDetailView(post: post)) {
+                            EmptyView()
+                        }
+                        .opacity(0)
                         PostSummaryView(post: post, category: post.category)
+                            // 공유 및 삭제
+                            .contextMenu {
+                                ShareLink(item: post.title)
+                                Button {
+                                    deletePost(post: post)
+                                } label: {
+                                    Image(systemName: "trash")
+                                    Text("삭제")
+                                }
+                            }
                     }
-                    
+                }
+                // 삭제
+                .onDelete { indexSet in
+                    posts.remove(atOffsets: indexSet)
                 }
                 .listRowSeparator(.hidden)
-            }
-            .navigationDestination(for: Post.self) { post in
-                PostDetailView(post: post)
             }
             .listStyle(.plain)
             .buttonStyle(.plain)
@@ -85,8 +98,15 @@ struct PostListView: View {
             // 검색창
             
             // 게시글 추가 버튼
-            
-            // 게시글 삭제
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("글쓰기") {
+                        // add post
+                        
+                    }
+                    .padding([.top, .trailing], 10)
+                }
+            }
             
         }
         
@@ -101,6 +121,12 @@ struct PostListView: View {
             return isExercisePressed ? .blue : .black
         case .diet:
             return isDietPressed ? .blue : .black
+        }
+    }
+    // 게시글 삭제
+    private func deletePost(post: Post) {
+        if let index = posts.firstIndex(of: post) {
+            posts.remove(at: index)
         }
     }
 }
