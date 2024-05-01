@@ -71,11 +71,13 @@ struct PostListView: View {
                     PostSummaryView(post: post, category: post.category)
                 }
                 
+                
             }
             .navigationDestination(for: Post.self) { post in
                 PostDetailView(post: post)
             }
-            .listStyle(.insetGrouped)
+            .listStyle(.plain)
+            
             
             // 검색창
             
@@ -88,7 +90,6 @@ struct PostListView: View {
             // 게시글 삭제
             
         }
-        .padding()
     }
     
     // 카테고리 버튼색 지정
