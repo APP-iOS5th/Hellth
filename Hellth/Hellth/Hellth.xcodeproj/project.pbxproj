@@ -14,6 +14,7 @@
 		7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */; };
 		7FCC46D32BE0F275005A2DAB /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46D22BE0F275005A2DAB /* HomeModel.swift */; };
 		7FCC46F62BE1FAEB005A2DAB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46F52BE1FAEB005A2DAB /* LoginView.swift */; };
+		7FCC46FA2BE20E28005A2DAB /* CalorieNutrientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		7FCC46D22BE0F275005A2DAB /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		7FCC46F52BE1FAEB005A2DAB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieNutrientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */,
+				7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */,
 				7FCC46F52BE1FAEB005A2DAB /* LoginView.swift */,
 			);
 			path = Views;
@@ -175,6 +178,7 @@
 				7FCC46D32BE0F275005A2DAB /* HomeModel.swift in Sources */,
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
 				7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */,
+				7FCC46FA2BE20E28005A2DAB /* CalorieNutrientView.swift in Sources */,
 				7FCC46F62BE1FAEB005A2DAB /* LoginView.swift in Sources */,
 				7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */,
 			);

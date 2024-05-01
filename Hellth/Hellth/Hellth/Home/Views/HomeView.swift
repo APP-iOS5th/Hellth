@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var food = [
-        Food(name: "apple"),
-        Food(name: "banana"),
-        Food(name: "rice"),
-        Food(name: "chicken")
+    @State private var foods: [Food] = [
+        Food(name: "Apple", calories: 52, carbohydrates: 14, protein: 0, fat: 0),
+        Food(name: "Banana", calories: 89, carbohydrates: 23, protein: 1, fat: 0),
+        Food(name: "Rice", calories: 130, carbohydrates: 28, protein: 3, fat: 0),
+        Food(name: "Chicken", calories: 165, carbohydrates: 0, protein: 31, fat: 3)
     ]
     var body: some View {
         ZStack {
@@ -39,17 +39,17 @@ struct HomeView: View {
                     }
                     .padding()
                     HStack(spacing: 20){
-                        Ingredient(image: "rectangle", ingredient: "Carbon", value: "45", measurement: "%")
-                        Ingredient(image: "triangle", ingredient: "Protein", value: "24", measurement: "%")
-                        Ingredient(image: "circle", ingredient: "Fat", value: "35", measurement: "%")
+                        CalorieNutrientView(calorieNutrient: CalorieNutrient(name: "Carbon", value: "50g", measurement: 2), image: "pills")
+                        CalorieNutrientView(calorieNutrient: CalorieNutrient(name: "protein", value: "50g", measurement: 2), image: "fish")
+                        CalorieNutrientView(calorieNutrient: CalorieNutrient(name: "Fat", value: "50g", measurement: 2), image: "fossil.shell")
                     }
                     .frame(maxWidth: .infinity)
                     
                     
-                    Text("Eating food")
+                    Text("Food ate")
                         .padding()
                     
-                    ForEach(food) { item in
+                    ForEach(foods) { item in
                         HStack {
                             Text(item.name)
                             Spacer()
@@ -86,27 +86,7 @@ struct HomeView: View {
 }
 
 
-struct Ingredient: View {
-    let image: String
-    let ingredient: String
-    let value: String
-    let measurement: String
-    
-    var body: some View {
-        VStack {
-            Image(systemName: image)
-            Text(ingredient)
-            Text(value)
-                .font(.title)
-            Text(measurement)
-        }
-        .padding()
-        .foregroundStyle(.red)
-        .background(RoundedRectangle(cornerRadius: 15).fill(Color.white).shadow(color: .gray, radius: 3, x: 8, y: 8))
-        .aspectRatio(contentMode: .fit)
-        .frame(maxWidth: .infinity)
-    }
-}
+
 
 #Preview {
     HomeView()
