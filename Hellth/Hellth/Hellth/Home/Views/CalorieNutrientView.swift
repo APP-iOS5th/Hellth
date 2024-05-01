@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct CalorieNutrientView: View {
@@ -14,7 +13,7 @@ struct CalorieNutrientView: View {
             Text(String(calorieNutrient.measurement) + "%")
         }
         .padding()
-        .foregroundStyle(.red)
+        .foregroundStyle(.blue)
         .background(RoundedRectangle(cornerRadius: 15).fill(Color.white).shadow(color: .gray, radius: 3, x: 8, y: 8))
         .aspectRatio(contentMode: .fit)
         .frame(maxWidth: .infinity)
