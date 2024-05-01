@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58C0EEDA2BE1C66B00D63E3E /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EED92BE1C66B00D63E3E /* PostListView.swift */; };
+		58C0EEDC2BE1C72A00D63E3E /* PostSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EEDB2BE1C72A00D63E3E /* PostSummaryView.swift */; };
+		58C0EEDE2BE1C73A00D63E3E /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EEDD2BE1C73A00D63E3E /* PostDetailView.swift */; };
+		58C0EEE02BE1C74D00D63E3E /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EEDF2BE1C74D00D63E3E /* AddPostView.swift */; };
+		58C0EEE22BE1C75B00D63E3E /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EEE12BE1C75B00D63E3E /* CommentView.swift */; };
 		7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A382BE0D3E800159A02 /* HellthApp.swift */; };
 		7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */; };
 		7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58C0EED92BE1C66B00D63E3E /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		58C0EEDB2BE1C72A00D63E3E /* PostSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSummaryView.swift; sourceTree = "<group>"; };
+		58C0EEDD2BE1C73A00D63E3E /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		58C0EEDF2BE1C74D00D63E3E /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		58C0EEE12BE1C75B00D63E3E /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		7F6D9A352BE0D3E800159A02 /* Hellth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hellth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6D9A382BE0D3E800159A02 /* HellthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HellthApp.swift; sourceTree = "<group>"; };
 		7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,7 +33,6 @@
 		7F6D9A3F2BE0D3EA00159A02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7FCC46D22BE0F275005A2DAB /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
-		7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,10 +46,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58C0EED72BE1C5C600D63E3E /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				58C0EED82BE1C62200D63E3E /* Views */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		58C0EED82BE1C62200D63E3E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58C0EED92BE1C66B00D63E3E /* PostListView.swift */,
+				58C0EEDB2BE1C72A00D63E3E /* PostSummaryView.swift */,
+				58C0EEDD2BE1C73A00D63E3E /* PostDetailView.swift */,
+				58C0EEDF2BE1C74D00D63E3E /* AddPostView.swift */,
+				58C0EEE12BE1C75B00D63E3E /* CommentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7F6D9A2C2BE0D3E800159A02 = {
 			isa = PBXGroup;
 			children = (
-				7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */,
 				7F6D9A372BE0D3E800159A02 /* Hellth */,
 				7F6D9A362BE0D3E800159A02 /* Products */,
 			);
@@ -57,6 +85,7 @@
 		7F6D9A372BE0D3E800159A02 /* Hellth */ = {
 			isa = PBXGroup;
 			children = (
+				58C0EED72BE1C5C600D63E3E /* Community */,
 				7F6D9A382BE0D3E800159A02 /* HellthApp.swift */,
 				7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */,
 				7FCC46CB2BE0F156005A2DAB /* Home */,
@@ -173,6 +202,11 @@
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
 				7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */,
 				7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */,
+				58C0EEDE2BE1C73A00D63E3E /* PostDetailView.swift in Sources */,
+				58C0EEE22BE1C75B00D63E3E /* CommentView.swift in Sources */,
+				58C0EEDA2BE1C66B00D63E3E /* PostListView.swift in Sources */,
+				58C0EEE02BE1C74D00D63E3E /* AddPostView.swift in Sources */,
+				58C0EEDC2BE1C72A00D63E3E /* PostSummaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +215,6 @@
 /* Begin XCBuildConfiguration section */
 		7F6D9A412BE0D3EA00159A02 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -245,7 +278,6 @@
 		};
 		7F6D9A422BE0D3EA00159A02 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
