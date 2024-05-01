@@ -110,7 +110,7 @@ struct PostListView: View {
                 }
             }
             .sheet(isPresented: $isSheetShowing) {
-                AddPostView()
+                AddPostView(post: posts[0])
             }
             
         }
