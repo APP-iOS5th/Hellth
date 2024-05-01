@@ -17,6 +17,8 @@ struct CalorieCircleView: View {
                 )
             Circle()
                 .stroke()
+                .fill(Color.white)
+                .shadow(color: .gray, radius: 3, x: 8, y: 8)
             
         }
         .padding()
