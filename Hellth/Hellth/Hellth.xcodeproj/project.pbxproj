@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DA8FA482BE1DA3D00CEA130 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8FA472BE1DA3D00CEA130 /* ProfileView.swift */; };
 		7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A382BE0D3E800159A02 /* HellthApp.swift */; };
 		7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */; };
 		7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DA8FA472BE1DA3D00CEA130 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7F6D9A352BE0D3E800159A02 /* Hellth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hellth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6D9A382BE0D3E800159A02 /* HellthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HellthApp.swift; sourceTree = "<group>"; };
 		7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,7 +25,6 @@
 		7F6D9A3F2BE0D3EA00159A02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7FCC46D22BE0F275005A2DAB /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
-		7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,10 +38,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DA8FA462BE1D9F900CEA130 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3DA8FA472BE1DA3D00CEA130 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		7F6D9A2C2BE0D3E800159A02 = {
 			isa = PBXGroup;
 			children = (
-				7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */,
 				7F6D9A372BE0D3E800159A02 /* Hellth */,
 				7F6D9A362BE0D3E800159A02 /* Products */,
 			);
@@ -57,6 +65,7 @@
 		7F6D9A372BE0D3E800159A02 /* Hellth */ = {
 			isa = PBXGroup;
 			children = (
+				3DA8FA462BE1D9F900CEA130 /* Profile */,
 				7F6D9A382BE0D3E800159A02 /* HellthApp.swift */,
 				7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */,
 				7FCC46CB2BE0F156005A2DAB /* Home */,
@@ -171,6 +180,7 @@
 			files = (
 				7FCC46D32BE0F275005A2DAB /* HomeModel.swift in Sources */,
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
+				3DA8FA482BE1DA3D00CEA130 /* ProfileView.swift in Sources */,
 				7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */,
 				7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */,
 			);
@@ -181,7 +191,6 @@
 /* Begin XCBuildConfiguration section */
 		7F6D9A412BE0D3EA00159A02 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -245,7 +254,6 @@
 		};
 		7F6D9A422BE0D3EA00159A02 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
