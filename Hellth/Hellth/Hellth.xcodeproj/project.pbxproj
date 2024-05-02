@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58251A612BE3894400DFC6EC /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58251A602BE3894400DFC6EC /* CommentService.swift */; };
 		5891275A2BE3196F0033364B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 589127592BE3196F0033364B /* FirebaseFirestore */; };
 		5891275C2BE3196F0033364B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5891275B2BE3196F0033364B /* FirebaseFirestoreSwift */; };
 		589127622BE327ED0033364B /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589127612BE327ED0033364B /* PostsService.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58251A602BE3894400DFC6EC /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		589127612BE327ED0033364B /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 		589127652BE360190033364B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/firebase-info/HellthCommunity/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		589127672BE362A10033364B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				58C0EEE42BE1CA0A00D63E3E /* Post.swift */,
 				58C0EEE62BE242E800D63E3E /* Comment.swift */,
 				589127612BE327ED0033364B /* PostsService.swift */,
+				58251A602BE3894400DFC6EC /* CommentService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				58C0EEDC2BE1C72A00D63E3E /* PostSummaryView.swift in Sources */,
 				58C0EEE72BE242E800D63E3E /* Comment.swift in Sources */,
 				58C0EEE52BE1CA0A00D63E3E /* Post.swift in Sources */,
+				58251A612BE3894400DFC6EC /* CommentService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

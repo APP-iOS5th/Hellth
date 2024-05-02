@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct PostDetailView: View {
-    @State var post: Post
-    @State var comment: Comment
+    var post: Post
+    
+    @StateObject var commentService: CommentService
     @State var inputComment: String = ""
     
     private let dateFormat: DateFormatter = {
