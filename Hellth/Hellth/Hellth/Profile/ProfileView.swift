@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let username = "Jhon"
+    @State private var showAlert = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            showAlert = true
+        } label: {
+            Text("Edit")
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Edit username"),
+            message: Text("\(username)"),
+                  dismissButton: .default(Text("Confirm"))
+                                          )
+        }
+
+        Text(username)
+        Image(systemName: "person.circle.fill")
     }
 }
 
