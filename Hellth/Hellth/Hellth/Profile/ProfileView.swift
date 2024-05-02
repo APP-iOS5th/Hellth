@@ -6,29 +6,52 @@
 //
 
 import SwiftUI
+struct Profile {
+    let username: String
+    let weight: Int
+}
+extension Profile {
+    func editWeight(weight: Int) -> Int {
+        return weight
+    }
+}
 
 struct ProfileView: View {
-    let username = "Jhon"
+    let profile = Profile(username: "Jhon", weight: 50)
+    @State var weightInTextField: String
     @State private var showAlert = false
+    @State private var showSheet = false
     var body: some View {
+        
         Button {
             showAlert = true
         } label: {
-            Text("Edit")
+            Text("Alert")
         }
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text("Edit username"),
-            message: Text("\(username)"),
+                title: Text("display username"),
+                message: Text("\(profile.username)"),
                   dismissButton: .default(Text("Confirm"))
                                           )
         }
+        Button {
+            showSheet = true
+        } label: {
+            Text("Sheet")
+        }
+        .sheet(isPresented: $showSheet) {
+            TextField("input", text: $weightInTextField)
+                .textFieldStyle(.roundedBorder)
+        }
+        
 
-        Text(username)
+
+        Text(profile.username)
         Image(systemName: "person.circle.fill")
     }
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(weightInTextField: "\(55)")
 }
