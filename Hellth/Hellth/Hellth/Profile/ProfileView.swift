@@ -7,21 +7,21 @@
 
 import SwiftUI
 struct Profile {
-    let username: String
+    var username: String
     let weight: Int
 }
 extension Profile {
-    func editWeight(weight: Int) -> Int {
-        return weight
+    func editWeight(weight: Int) -> Void {
+        print("weight: \(weight)")
     }
 }
 
 struct ProfileView: View {
-    let profile = Profile(username: "Jhon", weight: 50)
+    var profile = Profile(username: "Jhon", weight: 50)
     @State var usernameInTextField: String
     @State var weightInTextField: String
     @State private var showAlert = false
-    @State private var showSheet = false
+    
     var body: some View {
         VStack {
             Section("Profile") {
@@ -63,10 +63,10 @@ struct ProfileView: View {
         }
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text("display username"),
-                message: Text("\(profile.username)"),
-                  dismissButton: .default(Text("Confirm"))
-                                          )
+                title: Text("are you sure?"),
+                message: Text("really?"),
+                dismissButton: .default(Text("sure"))
+            )
         }
     }
 }
