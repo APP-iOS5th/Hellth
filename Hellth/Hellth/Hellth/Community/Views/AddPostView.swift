@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct AddPostView: View {
-    @State var post: Post
     @State var pickedCategory: Category = .exercise
     @State private var inputTitle: String = ""
     @State private var inputBody: String = ""
     @Environment(\.dismiss) var dismiss
+    
+    var service: PostsService?
     
     var body: some View {
         NavigationStack {
@@ -73,7 +74,7 @@ struct AddPostView: View {
                 .padding(25)
                 // 올리기 버튼
                 Button {
-                    
+                    service?.addPost(category: pickedCategory.rawValue, title: inputTitle, date: Date(), body: inputBody, author: nil, username: nil, photoURL: nil)
                 } label: {
                     Text("글 올리기")
                         .padding()
@@ -91,6 +92,6 @@ struct AddPostView: View {
     }
 }
 
-#Preview {
-    AddPostView(post: Post.sample[0])
-}
+//#Preview {
+//    AddPostView(service: nil)
+//}
