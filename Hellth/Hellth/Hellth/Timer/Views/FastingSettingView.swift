@@ -13,12 +13,17 @@ struct FastingSettingView: View {
     @State private var startMinute = 0
     @State private var durationHour = 0
     
+    private var currentDateTime = Date.now
+    
     private func oneMonthFromToday() -> Date {
         let calendar = Calendar.current
         
-        return calendar.date(byAdding: .month, value: 1, to: Date()) ?? Date()
+        return calendar.date(byAdding: .day, value: 7, to: Date()) ?? Date()
     }
+    
     var body: some View {
+        var startDateTime = (Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: startDate) ?? Date()).addingTimeInterval(TimeInterval(startHour*60*60 + startMinute*60))
+        
         NavigationStack {
             ScrollView {
                 VStack {
@@ -80,14 +85,19 @@ struct FastingSettingView: View {
                         }
                         .padding(.bottom, 20)
                     }
-                    NavigationLink {
-                        TimerActionView(startDate: startDate, startHour: startHour, startMinute: startMinute, durationHour: durationHour)
-                    } label: {
-                        Text("단식 시작")
-                    }
                     Spacer()
                 }
                 .navigationTitle("단식 계획 설정")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        NavigationLink(destination: {
+                            TimerActionView(startDateTime: startDateTime, durationHour: durationHour)
+                        }, label: {
+                            Text("단식 시작")
+                        })
+                        .disabled(startDateTime.timeIntervalSince(currentDateTime) <= 0 || durationHour <= 0)
+                    }
+                }
             }
         }
     }

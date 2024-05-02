@@ -8,25 +8,23 @@
 import SwiftUI
 
 struct TimerActionView: View {
-    var startDate: Date
-    var startHour: Int
-    var startMinute: Int
-    var durationHour: Int
+    let startDateTime: Date
+    let durationHour: Int
+    private let currentDate = Date.now
     
-    var currentDate = Date.now
+    @State private var remainingSeconds: Double = 0.0
     
     var body: some View {
-        let startDateTime = startDate.addingTimeInterval(TimeInterval(startHour*60*60 + startMinute*60))
+        let totalSeconds = startDateTime.timeIntervalSince(currentDate)
         VStack {
-            Text("\(startDate)")
-            Text("Start: \(startDate.formatted(.dateTime.day().month().year())) \(startHour) 시 \(startMinute)분")
             Text("Duration Hour: \(durationHour)")
             Text("Start: \(startDateTime), \nCurrent: \(currentDate)")
-            Text("\(currentDate.timeIntervalSince(startDateTime) )")
+            Text("\(startDateTime.timeIntervalSince(currentDate))")
+            Text("단식 시작까지")
         }
     }
 }
 
 #Preview {
-    TimerActionView(startDate: Date(), startHour: 17, startMinute: 0, durationHour: 1)
+    TimerActionView(startDateTime: Date(), durationHour: 1)
 }
