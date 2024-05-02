@@ -69,52 +69,56 @@ struct PostDetailView: View {
                     .padding()
                 // 댓글 작성자 정보, 작성 시간
                 ScrollView {
-                    ForEach(commentService.comments) { comment in
-                        HStack {
-                            // 사용자 정보, 작성 시간
-                            AsyncImage(url: comment.photoURL) { image in
-                                image
-                                    .resizable()
-                                    .clipShape(Circle())
-                            } placeholder: {
-                                Image(systemName: "person.circle.fill")
-                                    .resizable()
-                                    .foregroundStyle(.blue)
+                    VStack {
+                        ForEach(commentService.comments) { comment in
+                            HStack {
+                                // 사용자 정보, 작성 시간
+                                AsyncImage(url: comment.photoURL) { image in
+                                    image
+                                        .resizable()
+                                        .clipShape(Circle())
+                                } placeholder: {
+                                    Image(systemName: "person.circle.fill")
+                                        .resizable()
+                                        .foregroundStyle(.blue)
+                                }
+                                .frame(width: 25, height: 25)
+                                .padding(.trailing, 10)
+                                Text("\(comment.username ?? "익명")")
+                                    .bold()
                             }
-                            .frame(width: 25, height: 25)
-                            Text("\(comment.username ?? "익명")")
-                                .bold()
-                        }
-                        .padding([.top, .bottom], 10)
-                        // 댓글 내용
-                        Text("\(comment.body)")
-                            .padding(.leading, 32)
-                            .padding(.bottom, 10)
-                        // 조회수, 공감수, 댓글수, 날짜
-                        HStack {
-                            Button {
+                            .padding([.top, .bottom], 10)
+                            // 댓글 내용
+                            Text("\(comment.body)")
+                                .padding(.leading, 30)
+                                .padding(.bottom, 10)
+                            // 조회수, 공감수, 댓글수, 날짜
+                            HStack {
+                                Button {
+                                    commentService.updateCommentLikes(commentId: comment.id)
+                                } label: {
+                                    Image(systemName: comment.isLiked ? "heart.fill" : "heart")
+                                        .foregroundStyle(comment.isLiked ? .pink: .primary)
+                                    Text("\(comment.likes)")
+                                        .foregroundStyle(Color(.systemGray))
+                                }
                                 
-                            } label: {
-                                Image(systemName: "heart.fill")
-                                    .foregroundStyle(.pink)
-                                Text("2")
+                                
+                                // 대댓글 수(버튼)
+                                Button {
+                                    
+                                } label: {
+                                    Text("· 대댓글 달기")
+                                        .foregroundStyle(Color(.systemGray))
+                                }
+                                Spacer()
+                                Text("\(comment.date, formatter: dateFormat)")
                                     .foregroundStyle(Color(.systemGray))
                             }
-                            
-                            
-                            // 대댓글 수(버튼)
-                            Button {
-                                
-                            } label: {
-                                Text("· 대댓글 달기")
-                                    .foregroundStyle(Color(.systemGray))
-                            }
-                            Spacer()
-                            Text("\(comment.date, formatter: dateFormat)")
-                                .foregroundStyle(Color(.systemGray))
                         }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                     }
-                    .padding(.leading, 32)
+                    .padding(.leading, 20)
                     .padding([.trailing, .bottom], 15)
                     
                     Divider()

@@ -62,4 +62,25 @@ class CommentService: ObservableObject {
         let comment = Comment(id: UUID().uuidString, date: date, body: body, author: author, username: username)
         _ = try? dbCollection.addDocument(from: comment)
     }
+    
+    func updateCommentLikes(commentId: String) {
+        if let commentIndex = comments.firstIndex(where: {
+            $0.id == commentId
+        }) {
+            let comment = comments[commentIndex]
+            var likes = comment.likes
+            
+            // 좋아요 이미 눌렀는지 확인
+            let isLiked = comment.isLiked
+            if isLiked {
+                likes -= 1
+            } else {
+                likes += 1
+            }
+            comments[commentIndex].likes = likes
+            comments[commentIndex].isLiked = !isLiked
+            
+            dbCollection.document(commentId).updateData(["likes": likes])
+        }
+    }
 }
