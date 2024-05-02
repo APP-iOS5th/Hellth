@@ -18,15 +18,48 @@ extension Profile {
 
 struct ProfileView: View {
     let profile = Profile(username: "Jhon", weight: 50)
+    @State var usernameInTextField: String
     @State var weightInTextField: String
     @State private var showAlert = false
     @State private var showSheet = false
     var body: some View {
+        VStack {
+            Section("Profile") {
+                HStack {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    VStack {
+                        Text(profile.username)
+                        Text("\(profile.weight) kg")
+                    }
+                }
+                .padding()
+                .frame(height: 200)
+            }
+            Divider()
+            Section("Edit") {
+                VStack {
+                    HStack {
+                        Image(systemName: "arrow.up.and.person.rectangle.portrait")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        VStack {
+                            TextField("input", text: $usernameInTextField)
+                                .textFieldStyle(.roundedBorder)
+                            TextField("input", text: $weightInTextField)
+                                .textFieldStyle(.roundedBorder)
+
+                        }
+                    }
+                }
+            }
+        }
         
         Button {
             showAlert = true
         } label: {
-            Text("Alert")
+            Text("Update")
         }
         .alert(isPresented: $showAlert) {
             Alert(
@@ -35,23 +68,9 @@ struct ProfileView: View {
                   dismissButton: .default(Text("Confirm"))
                                           )
         }
-        Button {
-            showSheet = true
-        } label: {
-            Text("Sheet")
-        }
-        .sheet(isPresented: $showSheet) {
-            TextField("input", text: $weightInTextField)
-                .textFieldStyle(.roundedBorder)
-        }
-        
-
-
-        Text(profile.username)
-        Image(systemName: "person.circle.fill")
     }
 }
 
 #Preview {
-    ProfileView(weightInTextField: "\(55)")
+    ProfileView(usernameInTextField: "Jhon", weightInTextField: "\(55)")
 }
