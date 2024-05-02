@@ -22,7 +22,7 @@ struct ContentView: View {
                         
                     }
                 
-                Text("Profile")
+                ProfileView(usernameInTextField: "", weightInTextField: "")
                     .tabItem {
                         Label("Profile", systemImage: "person")
                     }
