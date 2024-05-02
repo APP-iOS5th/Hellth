@@ -71,7 +71,7 @@ struct PostsListView: View {
             List {
                 ForEach(filteredPosts, id: \.self) { post in
                     ZStack {
-                        NavigationLink(destination: PostDetailView(post: post, comment: Comment.sample[0])) {
+                        NavigationLink(destination: PostDetailView(post: post)) {
                             EmptyView()
                         }
                         .opacity(0)
