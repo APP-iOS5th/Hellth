@@ -1,5 +1,5 @@
 //
-//  PostListView.swift
+//  PostsListView.swift
 //  Hellth
 //
 //  Created by 박지혜 on 5/1/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PostListView: View {
+struct PostsListView: View {
     @StateObject private var service: PostsService = PostsService()
     
     @State var isTotalPressed: Bool = true
@@ -90,7 +90,7 @@ struct PostListView: View {
                 }
                 // 삭제
                 .onDelete { indexSet in
-                    posts.remove(atOffsets: indexSet)
+                    service.posts.remove(atOffsets: indexSet)
                 }
                 .listRowSeparator(.hidden)
             }
@@ -112,7 +112,10 @@ struct PostListView: View {
                 }
             }
             .sheet(isPresented: $isSheetShowing) {
-                AddPostView(post: posts[0])
+                AddPostView(service: service)
+            }
+            .task {
+                service.fetch()
             }
             
         }
@@ -132,12 +135,12 @@ struct PostListView: View {
     }
     // 게시글 삭제
     private func deletePost(post: Post) {
-        if let index = posts.firstIndex(of: post) {
-            posts.remove(at: index)
+        if let index = service.posts.firstIndex(of: post) {
+            service.posts.remove(at: index)
         }
     }
 }
 
 //#Preview {
-//    PostListView(posts: Post.sample)
+//    PostsListView(posts: Post.sample)
 //}

@@ -21,7 +21,7 @@ struct HellthApp: App {
         
         WindowGroup {
 //            ContentView()
-            PostListView()
+            PostsListView()
         }
     }
 }
