@@ -16,10 +16,10 @@
 		7FCC46FA2BE20E28005A2DAB /* CalorieNutrientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */; };
 		7FCC46FC2BE21CB2005A2DAB /* AddCalorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46FB2BE21CB2005A2DAB /* AddCalorieView.swift */; };
 		7FCC46FE2BE22B77005A2DAB /* CalorieCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */; };
-		7FCC47002BE27E7C005A2DAB /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46FF2BE27E7C005A2DAB /* FoodListView.swift */; };
 		7FCC47082BE31928005A2DAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC47072BE31928005A2DAB /* Extensions.swift */; };
 		7FCC470A2BE322BE005A2DAB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC47092BE322BE005A2DAB /* Model.swift */; };
 		7FCC470C2BE32345005A2DAB /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC470B2BE32345005A2DAB /* FoodRow.swift */; };
+		7FCC470E2BE3247B005A2DAB /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC470D2BE3247B005A2DAB /* FoodList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +34,10 @@
 		7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieNutrientView.swift; sourceTree = "<group>"; };
 		7FCC46FB2BE21CB2005A2DAB /* AddCalorieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCalorieView.swift; sourceTree = "<group>"; };
 		7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCircleView.swift; sourceTree = "<group>"; };
-		7FCC46FF2BE27E7C005A2DAB /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
 		7FCC47072BE31928005A2DAB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7FCC47092BE322BE005A2DAB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		7FCC470B2BE32345005A2DAB /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
+		7FCC470D2BE3247B005A2DAB /* FoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +100,12 @@
 		7FCC46CC2BE0F16C005A2DAB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */,
-				7FCC46FF2BE27E7C005A2DAB /* FoodListView.swift */,
-				7FCC470B2BE32345005A2DAB /* FoodRow.swift */,
 				7FCC46FB2BE21CB2005A2DAB /* AddCalorieView.swift */,
-				7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */,
 				7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */,
+				7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */,
+				7FCC470D2BE3247B005A2DAB /* FoodList.swift */,
+				7FCC470B2BE32345005A2DAB /* FoodRow.swift */,
+				7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */,
 				7FCC46F52BE1FAEB005A2DAB /* LoginView.swift */,
 			);
 			path = Views;
@@ -190,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FCC47002BE27E7C005A2DAB /* FoodListView.swift in Sources */,
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
 				7FCC470A2BE322BE005A2DAB /* Model.swift in Sources */,
 				7FCC470C2BE32345005A2DAB /* FoodRow.swift in Sources */,
@@ -199,6 +198,7 @@
 				7FCC46FA2BE20E28005A2DAB /* CalorieNutrientView.swift in Sources */,
 				7FCC46F62BE1FAEB005A2DAB /* LoginView.swift in Sources */,
 				7FCC46FE2BE22B77005A2DAB /* CalorieCircleView.swift in Sources */,
+				7FCC470E2BE3247B005A2DAB /* FoodList.swift in Sources */,
 				7FCC47082BE31928005A2DAB /* Extensions.swift in Sources */,
 				7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */,
 			);

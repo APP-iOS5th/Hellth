@@ -27,7 +27,7 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     Text("Food ate")
                         .padding()
-                    FoodListView(foods: Food.foods)
+                    FoodList(foods: Food.foods)
                 }
                 .padding()
             }

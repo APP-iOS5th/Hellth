@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FoodListView: View {
+struct FoodList: View {
     @State var foods: [Food]
     
     var body: some View {
@@ -13,5 +13,5 @@ struct FoodListView: View {
 
 #Preview {
     let sampleFoods = Food.foods
-    return FoodListView(foods: sampleFoods)
+    return FoodList(foods: sampleFoods)
 }
