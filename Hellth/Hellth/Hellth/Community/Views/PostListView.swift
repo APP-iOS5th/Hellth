@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PostListView: View {
+    @StateObject private var service: PostsService = PostsService()
+    
     @State var isTotalPressed: Bool = true
     @State var isExercisePressed: Bool = false
     @State var isDietPressed: Bool = false
@@ -31,13 +33,13 @@ struct PostListView: View {
         }
     }
     
-    @State var posts: [Post]
+//    @State var posts: [Post]
     // 카테고리별 게시글
     var filteredPosts: [Post] {
         if category == .total {
-            return posts
+            return service.posts
         } else {
-            return posts.filter {
+            return service.posts.filter {
                 $0.category == category.rawValue
             }
         }
@@ -136,6 +138,6 @@ struct PostListView: View {
     }
 }
 
-#Preview {
-    PostListView(posts: Post.sample)
-}
+//#Preview {
+//    PostListView(posts: Post.sample)
+//}

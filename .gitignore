@@ -93,6 +93,8 @@ xcuserdata
 ### Firebase info ###
 GoogleService-Info.plist
 
+### Secrets ###
+*.xcconfig
 
 ### Xcode ###
 

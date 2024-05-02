@@ -1,5 +1,5 @@
 //
-//  PostService.swift
+//  PostsService.swift
 //  Hellth
 //
 //  Created by 박지혜 on 5/2/24.
@@ -8,12 +8,12 @@
 import Firebase
 import FirebaseFirestore
 
-class PostService: ObservableObject {
+class PostsService: ObservableObject {
     @Published var posts: [Post]
     private let dbCollection = Firestore.firestore().collection("posts")
     private var listener: ListenerRegistration?
     
-    init(posts: [Post]) {
+    init(posts: [Post] = []) {
         self.posts = posts
         startRealtimeUpdates()
     }

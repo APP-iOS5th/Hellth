@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		5891275A2BE3196F0033364B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 589127592BE3196F0033364B /* FirebaseFirestore */; };
 		5891275C2BE3196F0033364B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5891275B2BE3196F0033364B /* FirebaseFirestoreSwift */; };
-		589127602BE326430033364B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5891275F2BE326430033364B /* GoogleService-Info.plist */; };
-		589127622BE327ED0033364B /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589127612BE327ED0033364B /* PostService.swift */; };
+		589127622BE327ED0033364B /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589127612BE327ED0033364B /* PostsService.swift */; };
+		589127662BE360190033364B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 589127652BE360190033364B /* GoogleService-Info.plist */; };
+		589127692BE365160033364B /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589127682BE365160033364B /* AuthenticationViewModel.swift */; };
 		58C0EEDA2BE1C66B00D63E3E /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EED92BE1C66B00D63E3E /* PostListView.swift */; };
 		58C0EEDC2BE1C72A00D63E3E /* PostSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EEDB2BE1C72A00D63E3E /* PostSummaryView.swift */; };
 		58C0EEDE2BE1C73A00D63E3E /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EEDD2BE1C73A00D63E3E /* PostDetailView.swift */; };
@@ -27,8 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5891275F2BE326430033364B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/firebase-info/Hellth/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		589127612BE327ED0033364B /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		589127612BE327ED0033364B /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
+		589127652BE360190033364B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/firebase-info/HellthCommunity/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		589127672BE362A10033364B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		589127682BE365160033364B /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		5891276A2BE37E8F0033364B /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		58C0EED92BE1C66B00D63E3E /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		58C0EEDB2BE1C72A00D63E3E /* PostSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSummaryView.swift; sourceTree = "<group>"; };
 		58C0EEDD2BE1C73A00D63E3E /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
@@ -84,7 +88,7 @@
 			children = (
 				58C0EEE42BE1CA0A00D63E3E /* Post.swift */,
 				58C0EEE62BE242E800D63E3E /* Comment.swift */,
-				589127612BE327ED0033364B /* PostService.swift */,
+				589127612BE327ED0033364B /* PostsService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,13 +112,16 @@
 		7F6D9A372BE0D3E800159A02 /* Hellth */ = {
 			isa = PBXGroup;
 			children = (
-				5891275F2BE326430033364B /* GoogleService-Info.plist */,
+				589127672BE362A10033364B /* Info.plist */,
+				5891276A2BE37E8F0033364B /* Secrets.xcconfig */,
+				589127652BE360190033364B /* GoogleService-Info.plist */,
 				58C0EED72BE1C5C600D63E3E /* Community */,
 				7F6D9A382BE0D3E800159A02 /* HellthApp.swift */,
 				7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */,
 				7FCC46CB2BE0F156005A2DAB /* Home */,
 				7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */,
 				7F6D9A3E2BE0D3EA00159A02 /* Preview Content */,
+				589127682BE365160033364B /* AuthenticationViewModel.swift */,
 			);
 			path = Hellth;
 			sourceTree = "<group>";
@@ -219,7 +226,7 @@
 			files = (
 				7F6D9A402BE0D3EA00159A02 /* Preview Assets.xcassets in Resources */,
 				7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */,
-				589127602BE326430033364B /* GoogleService-Info.plist in Resources */,
+				589127662BE360190033364B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589127692BE365160033364B /* AuthenticationViewModel.swift in Sources */,
 				7FCC46D32BE0F275005A2DAB /* HomeModel.swift in Sources */,
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
 				7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */,
@@ -237,7 +245,7 @@
 				58C0EEDE2BE1C73A00D63E3E /* PostDetailView.swift in Sources */,
 				58C0EEE22BE1C75B00D63E3E /* CommentView.swift in Sources */,
 				58C0EEDA2BE1C66B00D63E3E /* PostListView.swift in Sources */,
-				589127622BE327ED0033364B /* PostService.swift in Sources */,
+				589127622BE327ED0033364B /* PostsService.swift in Sources */,
 				58C0EEE02BE1C74D00D63E3E /* AddPostView.swift in Sources */,
 				58C0EEDC2BE1C72A00D63E3E /* PostSummaryView.swift in Sources */,
 				58C0EEE72BE242E800D63E3E /* Comment.swift in Sources */,
@@ -369,15 +377,17 @@
 		};
 		7F6D9A442BE0D3EA00159A02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5891276A2BE37E8F0033364B /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hellth/Preview Content\"";
-				DEVELOPMENT_TEAM = TU8YV9MV8Q;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hellth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -404,9 +414,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hellth/Preview Content\"";
-				DEVELOPMENT_TEAM = TU8YV9MV8Q;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hellth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
