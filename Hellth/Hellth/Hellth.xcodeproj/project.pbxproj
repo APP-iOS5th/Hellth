@@ -17,9 +17,9 @@
 		7FCC46FC2BE21CB2005A2DAB /* AddCalorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46FB2BE21CB2005A2DAB /* AddCalorieView.swift */; };
 		7FCC46FE2BE22B77005A2DAB /* CalorieCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */; };
 		7FCC47002BE27E7C005A2DAB /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46FF2BE27E7C005A2DAB /* FoodListView.swift */; };
-		7FCC47022BE280A6005A2DAB /* FoodRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC47012BE280A6005A2DAB /* FoodRowView.swift */; };
 		7FCC47082BE31928005A2DAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC47072BE31928005A2DAB /* Extensions.swift */; };
 		7FCC470A2BE322BE005A2DAB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC47092BE322BE005A2DAB /* Model.swift */; };
+		7FCC470C2BE32345005A2DAB /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC470B2BE32345005A2DAB /* FoodRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +35,9 @@
 		7FCC46FB2BE21CB2005A2DAB /* AddCalorieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCalorieView.swift; sourceTree = "<group>"; };
 		7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCircleView.swift; sourceTree = "<group>"; };
 		7FCC46FF2BE27E7C005A2DAB /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
-		7FCC47012BE280A6005A2DAB /* FoodRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRowView.swift; sourceTree = "<group>"; };
 		7FCC47072BE31928005A2DAB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7FCC47092BE322BE005A2DAB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7FCC470B2BE32345005A2DAB /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 			children = (
 				7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */,
 				7FCC46FF2BE27E7C005A2DAB /* FoodListView.swift */,
-				7FCC47012BE280A6005A2DAB /* FoodRowView.swift */,
+				7FCC470B2BE32345005A2DAB /* FoodRow.swift */,
 				7FCC46FB2BE21CB2005A2DAB /* AddCalorieView.swift */,
 				7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */,
 				7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */,
@@ -193,7 +193,7 @@
 				7FCC47002BE27E7C005A2DAB /* FoodListView.swift in Sources */,
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
 				7FCC470A2BE322BE005A2DAB /* Model.swift in Sources */,
-				7FCC47022BE280A6005A2DAB /* FoodRowView.swift in Sources */,
+				7FCC470C2BE32345005A2DAB /* FoodRow.swift in Sources */,
 				7FCC46FC2BE21CB2005A2DAB /* AddCalorieView.swift in Sources */,
 				7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */,
 				7FCC46FA2BE20E28005A2DAB /* CalorieNutrientView.swift in Sources */,

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FoodRowView: View {
+struct FoodRow: View {
     var food: Food
     var body: some View {
         HStack(spacing: 20) {
@@ -15,5 +15,5 @@ struct FoodRowView: View {
 
 #Preview {
     let sampleFood = Food(name: "Apple", calories: 52, carbohydrates: 14, protein: 0, fat: 0)
-    return FoodRowView(food: sampleFood)
+    return FoodRow(food: sampleFood)
 }

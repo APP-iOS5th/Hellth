@@ -5,7 +5,7 @@ struct FoodListView: View {
     
     var body: some View {
         ForEach(foods) { food in
-            FoodRowView(food: food)
+            FoodRow(food: food)
         }
         .padding()
     }
