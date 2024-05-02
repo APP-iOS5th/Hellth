@@ -94,6 +94,7 @@ xcuserdata
 GoogleService-Info.plist
 
 ### Secrets ###
+Info.plist
 *.xcconfig
 
 ### Xcode ###

@@ -1,11 +1,7 @@
-//import SwiftUI
-//import Firebase
+import SwiftUI
+import Firebase
 import GoogleSignIn
 
-import SwiftUI
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseAuth
 // 파이어베이스 연결 초기화
 class AppDelegate: NSObject, UIApplicationDelegate {
     
