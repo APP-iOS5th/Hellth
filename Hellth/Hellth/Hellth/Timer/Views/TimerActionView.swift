@@ -16,30 +16,37 @@ struct TimerActionView: View {
     @State private var isFasting: Bool = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    init(startDateTime: Date, durationHour: Int) {
-        self.startDateTime = startDateTime
-        self.durationHour = durationHour
-        self.durationSeconds = durationHour * 60 * 60
-    }
+    
+    
     var body: some View {
         VStack {
             Text("Duration Hour: \(durationHour)")
-            Text("\(isFasting ? "\(durationHour)시간 단식중" : "단식 시작까지")")
-            Text("\(isFasting ? durationSeconds : Int(remainingSeconds))")
-                .onReceive(timer){ time in
+            Text(printTime())
+                .onReceive(timer){ _ in
                     if !isFasting {
-                        self.remainingSeconds = startDateTime.timeIntervalSince(Date())
-                        if remainingSeconds < 0 {
-                            isFasting.toggle()
+                        remainingSeconds = startDateTime.timeIntervalSince(Date())
+                        if remainingSeconds <= 0 {
+                            isFasting = true
                         }
-                    } else if self.durationSeconds > 0{
-                        self.durationSeconds -= 1
+                    } else if durationSeconds > 0 {
+                        durationSeconds -= 1
                     }
                     
                 }
                 .onAppear(perform: {
-                    self.remainingSeconds = startDateTime.timeIntervalSince(Date())
+                    remainingSeconds = startDateTime.timeIntervalSince(Date())
+                    durationSeconds = durationHour * 10
                 })
+        }
+    }
+    
+    func printTime() -> String {
+        if !isFasting {
+            return "단식 시작까지\n남은 시간: \(Int(remainingSeconds))"
+        } else if durationSeconds > 0 {
+            return "\(durationHour)시간 단식중\n남은 시간: \(durationSeconds)"
+        } else {
+            return "\(durationHour)시간 단식 완료"
         }
     }
 }

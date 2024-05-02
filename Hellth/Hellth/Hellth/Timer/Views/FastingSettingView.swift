@@ -22,7 +22,7 @@ struct FastingSettingView: View {
     }
     
     var body: some View {
-        var startDateTime = (Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: startDate) ?? Date()).addingTimeInterval(TimeInterval(startHour*60*60 + startMinute*60))
+        let startDateTime = (Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: startDate) ?? Date()).addingTimeInterval(TimeInterval(startHour*60*60 + startMinute*60))
         
         NavigationStack {
             ScrollView {
@@ -60,9 +60,9 @@ struct FastingSettingView: View {
                             }
                             HStack {
                                 Picker(selection: $startMinute , label: Text("Minute")) {
-                                    ForEach(0..<6) { minute in
-                                        Text("\(minute * 10)")
-                                            .tag(minute * 10)
+                                    ForEach(0..<12) { minute in
+                                        Text("\(minute * 5)")
+                                            .tag(minute * 5)
                                     }
                                 }
                                 .frame(width: 200)
