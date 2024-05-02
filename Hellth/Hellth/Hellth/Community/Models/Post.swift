@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Category: String, CaseIterable {
+enum Category: String,/* Codable, */CaseIterable {
     case total = "전체"
     case exercise = "운동"
     case diet = "다이어트"
@@ -35,6 +35,17 @@ struct Post: Identifiable, Codable, Hashable {
     let username: String?
     var photoURL: URL?
     var docId: String?
+  
+//    enum CodingKeys: String, CodingKey {
+//        case category
+//        case title
+//        case date
+//        case body
+//        case author
+//        case username
+//        case photoURL
+//        case docId
+//    }
 }
 
 // 테스트 데이터
@@ -45,6 +56,4 @@ extension Post {
         Post(category: "다이어트", title: "오늘의 식단", date: Date(), body: "단백질", author: nil, username: nil, photoURL: nil, docId: nil),
         Post(category: "다이어트", title: "눈바디 체크", date: Date(), body: "살빠짐", author: nil, username: nil, photoURL: nil, docId: nil)
         ]
-    
-
 }

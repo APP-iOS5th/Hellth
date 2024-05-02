@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		5891275A2BE3196F0033364B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 589127592BE3196F0033364B /* FirebaseFirestore */; };
 		5891275C2BE3196F0033364B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5891275B2BE3196F0033364B /* FirebaseFirestoreSwift */; };
-		5891275E2BE321E20033364B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5891275D2BE321E20033364B /* GoogleService-Info.plist */; };
+		589127602BE326430033364B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5891275F2BE326430033364B /* GoogleService-Info.plist */; };
+		589127622BE327ED0033364B /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589127612BE327ED0033364B /* PostService.swift */; };
 		58C0EEDA2BE1C66B00D63E3E /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EED92BE1C66B00D63E3E /* PostListView.swift */; };
 		58C0EEDC2BE1C72A00D63E3E /* PostSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EEDB2BE1C72A00D63E3E /* PostSummaryView.swift */; };
 		58C0EEDE2BE1C73A00D63E3E /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0EEDD2BE1C73A00D63E3E /* PostDetailView.swift */; };
@@ -26,7 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5891275D2BE321E20033364B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5891275F2BE326430033364B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/firebase-info/Hellth/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		589127612BE327ED0033364B /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		58C0EED92BE1C66B00D63E3E /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		58C0EEDB2BE1C72A00D63E3E /* PostSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSummaryView.swift; sourceTree = "<group>"; };
 		58C0EEDD2BE1C73A00D63E3E /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				58C0EEE42BE1CA0A00D63E3E /* Post.swift */,
 				58C0EEE62BE242E800D63E3E /* Comment.swift */,
+				589127612BE327ED0033364B /* PostService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,7 +108,7 @@
 		7F6D9A372BE0D3E800159A02 /* Hellth */ = {
 			isa = PBXGroup;
 			children = (
-				5891275D2BE321E20033364B /* GoogleService-Info.plist */,
+				5891275F2BE326430033364B /* GoogleService-Info.plist */,
 				58C0EED72BE1C5C600D63E3E /* Community */,
 				7F6D9A382BE0D3E800159A02 /* HellthApp.swift */,
 				7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */,
@@ -216,7 +219,7 @@
 			files = (
 				7F6D9A402BE0D3EA00159A02 /* Preview Assets.xcassets in Resources */,
 				7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */,
-				5891275E2BE321E20033364B /* GoogleService-Info.plist in Resources */,
+				589127602BE326430033364B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +237,7 @@
 				58C0EEDE2BE1C73A00D63E3E /* PostDetailView.swift in Sources */,
 				58C0EEE22BE1C75B00D63E3E /* CommentView.swift in Sources */,
 				58C0EEDA2BE1C66B00D63E3E /* PostListView.swift in Sources */,
+				589127622BE327ED0033364B /* PostService.swift in Sources */,
 				58C0EEE02BE1C74D00D63E3E /* AddPostView.swift in Sources */,
 				58C0EEDC2BE1C72A00D63E3E /* PostSummaryView.swift in Sources */,
 				58C0EEE72BE242E800D63E3E /* Comment.swift in Sources */,
