@@ -20,6 +20,25 @@ struct HomeView: View {
     
     @AppStorage("userID") private var userID: String = ""
     
+    
+    //버튼 스타일 변경
+//    struct SignInView: View {
+//
+//        var body: some View {
+//
+//            SignInWithAppleButton(.signUp) { request in
+//                request.requestedScopes = [.fullName, .email]
+//            } onCompletion: { result in
+//                switch result {
+//                case .success(let authorization):
+//                    handleSuccessfulLogin(with: authorization)
+//                case .failure(let error):
+//                    handleLoginError(with: error)
+//                }
+//            }
+//            .frame(height: 50)
+//            .padding()
+//            
     var body: some View {
         ZStack {
             Color.white
@@ -39,6 +58,11 @@ struct HomeView: View {
         .task { await authorize() }
     }
     
+    
+    
+    
+    
+    //동기 비동기
     private func authorize() async {
         guard !userID.isEmpty else {
             userName = ""
