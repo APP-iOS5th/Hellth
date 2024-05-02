@@ -57,4 +57,9 @@ class CommentService: ObservableObject {
             $0.date > $1.date
         }
     }
+    
+    func addComment(date: Date, body: String, author: String?, username: String?, photoURL: URL?) {
+        let comment = Comment(id: UUID().uuidString, date: date, body: body, author: author, username: username)
+        _ = try? dbCollection.addDocument(from: comment)
+    }
 }

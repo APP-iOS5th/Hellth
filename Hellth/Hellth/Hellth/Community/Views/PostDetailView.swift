@@ -139,14 +139,15 @@ struct PostDetailView: View {
                             HStack {
                                 Spacer()
                                 Button {
-                                    
+                                    commentService.addComment(date: Date(), body: inputComment, author: nil, username: nil, photoURL: nil)
                                 } label: {
                                     Image(systemName: "arrow.up.circle.fill")
                                         .resizable()
                                         .frame(width: 30, height: 30)
-                                        .foregroundStyle(Color(.systemGray))
+                                        .foregroundStyle(inputComment.isEmpty ? Color(.systemGray) : .blue)
                                 }
                                 .padding()
+                                .disabled(inputComment.isEmpty)
                             }
                         }
                     }
@@ -162,6 +163,7 @@ struct PostDetailView: View {
             }
         
         }
+    
 }
 
 #Preview {

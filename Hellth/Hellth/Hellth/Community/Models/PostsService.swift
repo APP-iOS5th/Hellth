@@ -62,7 +62,6 @@ class PostsService: ObservableObject {
         }
     }
     
-    // 로그인 연동 전
     func addPost(category: String, title: String, date: Date, body: String, author: String?, username: String?, photoURL: URL?) {
         print("Author: \(String(describing: author))")
         let post = Post(id: UUID().uuidString, category: category, title: title, date: date, body: body, author: author, username: username)
