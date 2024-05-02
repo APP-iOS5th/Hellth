@@ -13,7 +13,7 @@ struct PostDetailView: View {
     
     init(post: Post) {
         self.post = post
-        _commentService = StateObject(wrappedValue: CommentService(postId: post.docId!))
+        _commentService = StateObject(wrappedValue: CommentService(postId: post.id))
     }
     
     @State var inputComment: String = ""
@@ -29,7 +29,7 @@ struct PostDetailView: View {
             VStack(alignment: .leading) {
                 // 카테고리
                 
-                // 글제목
+                // 글제목 
                 Text("\(post.title)")
                     .font(.title)
                     .bold()
@@ -56,16 +56,17 @@ struct PostDetailView: View {
                 .padding(.bottom, 30)
                 // 글내용
                 Text("\(post.body)")
+                    .frame(maxHeight: .infinity, alignment: .top)
                 // 공감 버튼
                 
                 Spacer()
                 // 댓글 수
                 Divider()
-                    .padding()
                 
                 // MARK: 추가 댓글 영역
                 Text("댓글")
                     .bold()
+                    .padding()
                 // 댓글 작성자 정보, 작성 시간
                 ScrollView {
                     ForEach(commentService.comments) { comment in
@@ -112,53 +113,55 @@ struct PostDetailView: View {
                             Text("\(comment.date, formatter: dateFormat)")
                                 .foregroundStyle(Color(.systemGray))
                         }
-                        .padding(.leading, 32)
-                        .padding([.trailing, .bottom], 15)
-                        Divider()
-                        // 댓글 입력
-                        HStack {
-                            VStack {
+                    }
+                    .padding(.leading, 32)
+                    .padding([.trailing, .bottom], 15)
+                    
+                    Divider()
+                    // 댓글 입력
+                    HStack {
+                        VStack {
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "photo.badge.plus")
+                                    .resizable()
+                                    .frame(width: 45, height: 40)
+                                    .foregroundStyle(Color(.systemGray))
+                                    .padding(5)
+                            }
+                        }
+                        ZStack {
+                            TextField("댓글을 입력해주세요", text: $inputComment)
+                                .padding()
+                                .frame(height: 50)
+                                .background(Capsule().fill(Color(.systemGray5)))
+                            HStack {
+                                Spacer()
                                 Button {
                                     
                                 } label: {
-                                    Image(systemName: "photo.badge.plus")
+                                    Image(systemName: "arrow.up.circle.fill")
                                         .resizable()
-                                        .frame(width: 45, height: 40)
+                                        .frame(width: 30, height: 30)
                                         .foregroundStyle(Color(.systemGray))
-                                        .padding(5)
                                 }
-                            }
-                            ZStack {
-                                TextField("댓글을 입력해주세요", text: $inputComment)
-                                    .padding()
-                                    .frame(height: 50)
-                                    .background(Capsule().fill(Color(.systemGray5)))
-                                HStack {
-                                    Spacer()
-                                    Button {
-                                        
-                                    } label: {
-                                        Image(systemName: "arrow.up.circle.fill")
-                                            .resizable()
-                                            .frame(width: 30, height: 30)
-                                            .foregroundStyle(Color(.systemGray))
-                                    }
-                                    .padding()
-                                }
+                                .padding()
                             }
                         }
                     }
                 }
-                .padding(.leading, 10)
-                .padding(20)
-                .lineLimit(nil)
-                .lineSpacing(10)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .navigationTitle("\(post.category)")
-                .navigationBarTitleDisplayMode(.inline)
             }
+            .padding(.leading, 10)
+            .padding(20)
+            .lineLimit(nil)
+            .lineSpacing(10)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .navigationTitle("\(post.category)")
+            .navigationBarTitleDisplayMode(.inline)
+            }
+        
         }
-    }
 }
 
 #Preview {

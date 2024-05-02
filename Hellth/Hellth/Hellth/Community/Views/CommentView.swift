@@ -22,6 +22,6 @@ struct CommentView: View {
     }
 }
 
-#Preview {
-    CommentView()
-}
+//#Preview {
+//    CommentView()
+//}

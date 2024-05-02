@@ -21,5 +21,5 @@ extension Comment {
     static let sample: [Comment] = [
         Comment(date: Date(), body: "오 멋진데요~", author: nil, username: nil, photoURL: nil, docId: nil),
         Comment(date: Date(), body: "오늘도 화이팅!", author: nil, username: nil, photoURL: nil, docId: nil)
-        ]
+    ]
 }

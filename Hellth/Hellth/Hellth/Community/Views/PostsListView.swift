@@ -46,7 +46,7 @@ struct PostsListView: View {
     }
     
     @State var isSheetShowing: Bool = false
-    
+
     var body: some View {
         NavigationStack {
             HStack {
@@ -75,6 +75,7 @@ struct PostsListView: View {
                             EmptyView()
                         }
                         .opacity(0)
+                        
                         PostSummaryView(post: post)
                             // 공유 및 삭제
                             .contextMenu {
@@ -142,5 +143,5 @@ struct PostsListView: View {
 }
 
 //#Preview {
-//    PostsListView(posts: Post.sample)
+//    PostsListView()
 //}

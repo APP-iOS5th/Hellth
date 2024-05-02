@@ -75,15 +75,16 @@ struct AddPostView: View {
                 // 올리기 버튼
                 Button {
                     service?.addPost(category: pickedCategory.rawValue, title: inputTitle, date: Date(), body: inputBody, author: nil, username: nil, photoURL: nil)
+                    
+                    dismiss()
                 } label: {
                     Text("글 올리기")
                         .padding()
-                        .foregroundStyle(.white)
-                        .frame(width: 350, height: 50)
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                            .fill(.blue))
                 }
+                .foregroundStyle(!inputTitle.isEmpty ? .white : Color(.systemGray))
+                .background(!inputTitle.isEmpty ? .blue : Color(.systemGray5))
+                .clipShape(Capsule())
+                .disabled(inputTitle.isEmpty)
                 
             }
             .navigationTitle("\(pickedCategory.rawValue)")

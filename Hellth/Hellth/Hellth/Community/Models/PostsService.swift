@@ -13,6 +13,7 @@ class PostsService: ObservableObject {
     private let dbCollection = Firestore.firestore().collection("posts")
     private var listener: ListenerRegistration?
     
+    
     init(posts: [Post] = []) {
         self.posts = posts
         startRealtimeUpdates()

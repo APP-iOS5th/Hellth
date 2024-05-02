@@ -47,6 +47,6 @@ struct PostSummaryView: View {
 }
 
 
-#Preview {
-    PostSummaryView(post: Post.sample[0])
-}
+//#Preview {
+//    PostSummaryView(post: Post.sample[0])
+//}
