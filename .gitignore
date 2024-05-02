@@ -90,6 +90,9 @@ Packages
 xcuserdata
 *.xcodeproj
 
+### Firebase info ###
+GoogleService-Info.plist
+
 
 ### Xcode ###
 
