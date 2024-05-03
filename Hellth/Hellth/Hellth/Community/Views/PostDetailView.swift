@@ -166,7 +166,6 @@ struct PostDetailView: View {
                     }
                     .padding(.leading, 20)
                     .padding([.trailing, .bottom], 20)
-                    
                     Divider()
                     // 댓글 입력
                     HStack {
