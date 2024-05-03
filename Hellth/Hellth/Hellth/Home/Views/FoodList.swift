@@ -1,17 +1,20 @@
 import SwiftUI
 
 struct FoodList: View {
-    @State var foods: [Food]
+    @ObservedObject var foodManager = FoodManager()
     
     var body: some View {
-        ForEach(foods) { food in
-            FoodRow(food: food)
+        VStack {
+            ForEach(foodManager.foods) { food in
+                FoodRow(food: food)
+            }
         }
-        .padding()
+        .onAppear {
+            foodManager.fetch()
+        }
     }
 }
 
 #Preview {
-    let sampleFoods = Food.foods
-    return FoodList(foods: sampleFoods)
+    FoodList()
 }

@@ -2,14 +2,17 @@ import SwiftUI
 
 struct FoodRow: View {
     var food: Food
+    
     var body: some View {
         HStack(spacing: 20) {
             Image(systemName: "fish")
+                .foregroundColor(.blue)
             Spacer()
             Text(food.name)
             Spacer()
-            Text(String(food.calories) + " Cal")
+            Text("\(food.calories) Cal")
         }
+        .padding()
     }
 }
 

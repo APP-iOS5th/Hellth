@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct CalorieCircleView: View {
-    var totalCalories: Int = 1000
-    var consumedCalories: Int = 600
+    var totalCalories: Int
+    var consumedCalories: Int
     var remainingCalories: Int {
         return totalCalories - consumedCalories
     }
@@ -19,9 +19,9 @@ struct CalorieCircleView: View {
                         Spacer()
                         Text("total: \(totalCalories) cal")
                         Spacer()
-                        Text("Current Calorie: \(consumedCalories)")
+                        Text("Consumed: \(consumedCalories)")
                         Spacer()
-                        Text("Remain Calorie: \(remainingCalories)")
+                        Text("Remaining: \(remainingCalories)")
                         Spacer()}
                 )
             Circle()
@@ -36,5 +36,5 @@ struct CalorieCircleView: View {
 }
 
 #Preview {
-    CalorieCircleView()
+    CalorieCircleView(totalCalories: 10, consumedCalories: 3)
 }

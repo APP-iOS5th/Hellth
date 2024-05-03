@@ -31,11 +31,14 @@ struct ContentView: View {
                 }
                 .accentColor(.green)
             } else {
-                LoginView()
             }
         }
     }
 }
+
+
+
+
 
 #Preview {
     ContentView()

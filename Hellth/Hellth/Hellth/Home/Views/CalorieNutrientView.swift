@@ -1,26 +1,32 @@
 import SwiftUI
 
 struct CalorieNutrientView: View {
-    let calorieNutrient: CalorieNutrient
+    let calorieNutrient: CalorieNutrients
     let image: String
     
     var body: some View {
         VStack {
             Image(systemName: image)
+                .font(.largeTitle)
             Text(calorieNutrient.name)
+                .font(.title)
             Text(calorieNutrient.value)
                 .font(.title)
-            Text(String(calorieNutrient.measurement) + "%")
+            Text(String(format: "%.f%%", calorieNutrient.measurement * 100))
+                .font(.title)
         }
         .padding()
-        .foregroundStyle(.blue)
-        .background(RoundedRectangle(cornerRadius: 15).fill(Color.white).shadow(color: .gray, radius: 3, x: 8, y: 8))
+        .foregroundColor(.black)
+        .background(
+            RoundedRectangle(cornerRadius: 15)
+                .fill(Color.white)
+                .shadow(color: .gray, radius: 3, x: 8, y: 8)
+        )
         .aspectRatio(contentMode: .fit)
         .frame(maxWidth: .infinity)
     }
 }
 
-
 #Preview {
-    CalorieNutrientView(calorieNutrient: CalorieNutrient(name: "protein", value: "50g", measurement: 0.12), image: "")
+    CalorieNutrientView(calorieNutrient: CalorieNutrients(name: "protein", value: "50g", measurement: 0.12), image: "fish")
 }
