@@ -20,37 +20,53 @@ struct TimerActionView: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    
     var body: some View {
-        VStack {
-            printTime()
-                .multilineTextAlignment(.center)
-                .padding()
-                .onReceive(timer){ _ in
-                    if !isFasting {
-                        remainingSeconds = startDateTime.timeIntervalSince(Date())
-                        if remainingSeconds <= 0 {
-                            isFasting = true
-                        }
-                    } else if durationSeconds > 0 {
-                        durationSeconds -= 1
-                        passedSeconds += 1
-                    }
-                    
+        NavigationStack {
+            VStack {
+                printTime()
+                    .multilineTextAlignment(.center)
+                    .padding()
+                Text(fastingDuration())
+                    .font(.system(size: 14))
+            }
+            
+            .navigationTitle("단식 타이머")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink(destination: {
+                        FastingEndView(fastingTime: printClockFormat(passedSeconds), ramainingTime: printClockFormat(durationSeconds))
+                    }, label: {
+                        Text("단식 종료")
+                    })
                 }
-                .onAppear(perform: {
+            }
+            .onReceive(timer){ _ in
+                if !isFasting {
                     remainingSeconds = startDateTime.timeIntervalSince(Date())
-                    durationSeconds = durationHour * 3600
-                    
-                })
-            Text(fastingDuration())
-                .font(.system(size: 14))
+                    if remainingSeconds <= 0 {
+                        isFasting = true
+                    }
+                } else if durationSeconds > 0 {
+                    durationSeconds -= 1
+                    passedSeconds += 1
+                }
+                
+            }
+            .onAppear(perform: {
+                remainingSeconds = startDateTime.timeIntervalSince(Date())
+                durationSeconds = durationHour * 3600
+                
+            })
+            .onDisappear(perform: {
+                self.timer.upstream.connect().cancel()
+            })
         }
     }
     
     @ViewBuilder
     func printTime() -> some View {
-        NavigationStack {
+//        NavigationStack {
             VStack {
                 if !isFasting {
                     Text("단식 시작까지")
@@ -75,18 +91,22 @@ struct TimerActionView: View {
                     Text("")
                 }
             }
-            .navigationTitle("단식 타이머")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink(destination: {
-                        FastingSettingView()
-                    }, label: {
-                        Text("단식 종료")
-                    })
-                }
-            }
-        }
+//            .navigationTitle("단식 타이머")
+//            .navigationBarTitleDisplayMode(.inline)
+//            .toolbar {
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    NavigationLink(destination: {
+//                        FastingEndView(fastingTime: printClockFormat(passedSeconds), ramainingTime: printClockFormat(durationSeconds))
+//                    }, label: {
+//                        Text("단식 종료")
+//                    })
+//                }
+//            }
+//            .onDisappear(perform: {
+//                self.timer.upstream.connect().cancel()
+//            })
+//        }
+
     }
     
     func printClockFormat(_ seconds: Int) -> String {

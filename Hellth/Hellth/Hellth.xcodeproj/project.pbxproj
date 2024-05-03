@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C186A0C2BE47826006966B7 /* FastingEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C186A0B2BE47826006966B7 /* FastingEndView.swift */; };
 		3C1AA18C2BE2093D0046C222 /* TimerActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AA18B2BE2093D0046C222 /* TimerActionView.swift */; };
 		3C2598F12BE1C68E002DF40C /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2598F02BE1C68E002DF40C /* TimerView.swift */; };
 		3C2598F32BE1D060002DF40C /* FastingSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2598F22BE1D060002DF40C /* FastingSettingView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C186A0B2BE47826006966B7 /* FastingEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingEndView.swift; sourceTree = "<group>"; };
 		3C1AA18B2BE2093D0046C222 /* TimerActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActionView.swift; sourceTree = "<group>"; };
 		3C2598F02BE1C68E002DF40C /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		3C2598F22BE1D060002DF40C /* FastingSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingSettingView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				3C2598F02BE1C68E002DF40C /* TimerView.swift */,
 				3C2598F22BE1D060002DF40C /* FastingSettingView.swift */,
 				3C1AA18B2BE2093D0046C222 /* TimerActionView.swift */,
+				3C186A0B2BE47826006966B7 /* FastingEndView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				7FCC46D32BE0F275005A2DAB /* HomeModel.swift in Sources */,
 				3C1AA18C2BE2093D0046C222 /* TimerActionView.swift in Sources */,
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
+				3C186A0C2BE47826006966B7 /* FastingEndView.swift in Sources */,
 				7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */,
 				7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */,
 			);

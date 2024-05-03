@@ -4,8 +4,8 @@ import SwiftUI
 struct HellthApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            FastingSettingView()
+            ContentView()
+//            TimerView()
         }
     }
 }

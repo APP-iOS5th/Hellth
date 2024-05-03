@@ -51,6 +51,7 @@ struct FastingSettingView: View {
                                 Picker("Hour", selection: $startHour) {
                                     ForEach(0..<24) { hour in
                                         Text("\(hour)")
+                                            .tag(hour)
                                     }
                                 }
                                 .frame(width: 100, height: 60)
@@ -59,7 +60,7 @@ struct FastingSettingView: View {
                                 Text("시")
                             }
                             HStack {
-                                Picker(selection: $startMinute , label: Text("Minute")) {
+                                Picker("Minute", selection: $startMinute) {
                                     ForEach(0..<6) { minute in
                                         Text("\(minute * 10)")
                                             .tag(minute * 10)
@@ -71,6 +72,7 @@ struct FastingSettingView: View {
                                 Text("분")
                             }
                         }
+                        .padding(.bottom, 20)
                     }
                     Section(header:
                                 Text("단식 유지 시간")
@@ -78,9 +80,15 @@ struct FastingSettingView: View {
                         .fontWeight(.bold)
                     ) {
                         HStack {
-                            TextField("시간", value: $durationHour, format: .number)
-                                .keyboardType(.numberPad)
-                                .frame(width: 80)
+                            Picker("시간", selection: $durationHour) {
+                                ForEach(0..<49) { time in
+                                    Text("\(time)")
+                                        .tag(time)
+                                }
+                            }
+                            .frame(width: 100, height: 60)
+                            .pickerStyle(.inline)
+                            .labelsHidden()
                             Text("시간")
                         }
                         .padding(.bottom, 20)
