@@ -44,10 +44,12 @@ class PostsService: ObservableObject {
     // Post 구조체에 데이터 넣기
     private func updatePosts(snapshot: QuerySnapshot) {
         let posts: [Post] = snapshot.documents.compactMap { document in
-            try? document.data(as: Post.self)
+            var post = try? document.data(as: Post.self)
+            post?.docId = document.documentID
+            return post
         }
         self.posts = posts.sorted {
-            $0.date < $1.date
+            $0.date > $1.date
         }
     }
     
@@ -64,6 +66,7 @@ class PostsService: ObservableObject {
     
     func addPost(category: String, title: String, date: Date, body: String, author: String?, username: String?, photoURL: URL?) {
         print("Author: \(String(describing: author))")
+        
         let post = Post(id: UUID().uuidString, category: category, title: title, date: date, body: body, author: author, username: username)
         _ = try? dbCollection.addDocument(from: post)
         fetch()

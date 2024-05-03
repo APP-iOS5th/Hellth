@@ -142,6 +142,6 @@ struct PostsListView: View {
     }
 }
 
-//#Preview {
-//    PostsListView()
-//}
+#Preview {
+    PostsListView()
+}

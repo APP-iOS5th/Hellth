@@ -14,9 +14,9 @@ struct Comment: Identifiable, Codable, Hashable {
     let author: String?
     let username: String?
     var photoURL: URL?
-    var docId: String?
     var likes: Int = 0 // 좋아요 수
     var isLiked: Bool = false // 좋아요 상태
+    var docId: String?
 }
 
 extension Comment {

@@ -13,10 +13,11 @@ struct PostDetailView: View {
     
     init(post: Post) {
         self.post = post
-        _commentService = StateObject(wrappedValue: CommentService(postId: post.id))
+        _commentService = StateObject(wrappedValue: CommentService(postId: post.docId!))
     }
     
-    @State var inputComment: String = ""
+    @State private var inputComment: String = ""
+    @State private var showingAlert: Bool = false
     
     private let dateFormat: DateFormatter = {
         let formatter = DateFormatter()
@@ -86,6 +87,26 @@ struct PostDetailView: View {
                                 .padding(.trailing, 10)
                                 Text("\(comment.username ?? "익명")")
                                     .bold()
+                                Spacer()
+                                // 댓글 삭제
+                                Button {
+                                    showingAlert = true
+                                } label: {
+                                    Text("···")
+                                }
+                                .alert(isPresented: $showingAlert) {
+                                    Alert(
+                                        title: Text("댓글 삭제"),
+                                        message: Text("삭제하시겠습니까?"),
+                                        primaryButton: .destructive(Text("확인")) {
+                                            // 삭제
+                                            Task {
+                                                await commentService.deleteComment()
+                                            }
+                                        },
+                                        secondaryButton: .cancel(Text("취소"))
+                                    )
+                                }
                             }
                             .padding([.top, .bottom], 10)
                             // 댓글 내용
@@ -119,12 +140,13 @@ struct PostDetailView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                     }
                     .padding(.leading, 20)
-                    .padding([.trailing, .bottom], 15)
+                    .padding([.trailing, .bottom], 20)
                     
                     Divider()
                     // 댓글 입력
                     HStack {
                         VStack {
+                            // 이미지 첨부
                             Button {
                                 
                             } label: {
@@ -142,8 +164,10 @@ struct PostDetailView: View {
                                 .background(Capsule().fill(Color(.systemGray5)))
                             HStack {
                                 Spacer()
+                                // 댓글 저장
                                 Button {
                                     commentService.addComment(date: Date(), body: inputComment, author: nil, username: nil, photoURL: nil)
+                                    inputComment = ""
                                 } label: {
                                     Image(systemName: "arrow.up.circle.fill")
                                         .resizable()

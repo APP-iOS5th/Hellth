@@ -58,9 +58,35 @@ class CommentService: ObservableObject {
         }
     }
     
+    func fetch() {
+        guard listener == nil else { return }
+        dbCollection.getDocuments { [self] querySnapshot, error in
+            guard let snapshot = querySnapshot else {
+                print("Error fetching snapshots: \(error!)")
+                return
+            }
+            updateComments(snapshot: snapshot)
+        }
+    }
+    
     func addComment(date: Date, body: String, author: String?, username: String?, photoURL: URL?) {
+        let docRef = dbCollection.document()
         let comment = Comment(id: UUID().uuidString, date: date, body: body, author: author, username: username)
-        _ = try? dbCollection.addDocument(from: comment)
+        do {
+            try docRef.setData(from: comment)
+            fetch()
+        } catch {
+            print("Error adding comment: \(error.localizedDescription)")
+        }
+    }
+    
+    func deleteComment() async {
+        do {
+          try await dbCollection.document().delete()
+          print("Document successfully removed!")
+        } catch {
+          print("Error removing document: \(error)")
+        }
     }
     
     func updateCommentLikes(commentId: String) {
