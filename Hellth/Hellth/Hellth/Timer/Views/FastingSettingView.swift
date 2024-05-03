@@ -48,24 +48,24 @@ struct FastingSettingView: View {
                     ) {
                         VStack {
                             HStack {
-                                Picker(selection: $startHour, label: Text("Hour")) {
+                                Picker("Hour", selection: $startHour) {
                                     ForEach(0..<24) { hour in
                                         Text("\(hour)")
                                     }
                                 }
-                                .frame(width: 80)
-                                .pickerStyle(MenuPickerStyle())
+                                .frame(width: 100, height: 60)
+                                .pickerStyle(.inline)
                                 .labelsHidden()
                                 Text("시")
                             }
                             HStack {
                                 Picker(selection: $startMinute , label: Text("Minute")) {
-                                    ForEach(0..<12) { minute in
-                                        Text("\(minute * 5)")
-                                            .tag(minute * 5)
+                                    ForEach(0..<6) { minute in
+                                        Text("\(minute * 10)")
+                                            .tag(minute * 10)
                                     }
                                 }
-                                .frame(width: 200)
+                                .frame(width: 300)
                                 .pickerStyle(SegmentedPickerStyle())
                                 .labelsHidden()
                                 Text("분")
