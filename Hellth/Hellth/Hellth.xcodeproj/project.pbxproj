@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C186A0C2BE47826006966B7 /* FastingEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C186A0B2BE47826006966B7 /* FastingEndView.swift */; };
+		3C1AA18C2BE2093D0046C222 /* TimerActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1AA18B2BE2093D0046C222 /* TimerActionView.swift */; };
+		3C2598F12BE1C68E002DF40C /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2598F02BE1C68E002DF40C /* TimerView.swift */; };
+		3C2598F32BE1D060002DF40C /* FastingSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2598F22BE1D060002DF40C /* FastingSettingView.swift */; };
+		3C2598F62BE1D321002DF40C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3C2598F52BE1D321002DF40C /* FirebaseAuth */; };
+		3C2598F82BE1D321002DF40C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3C2598F72BE1D321002DF40C /* FirebaseFirestore */; };
+		3C2598FA2BE1D321002DF40C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3C2598F92BE1D321002DF40C /* FirebaseFirestoreSwift */; };
+		3C2598FC2BE1DB7F002DF40C /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C2598FB2BE1DB7F002DF40C /* GoogleService-Info-2.plist */; };
 		7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A382BE0D3E800159A02 /* HellthApp.swift */; };
 		7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */; };
 		7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */; };
@@ -29,6 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C186A0B2BE47826006966B7 /* FastingEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingEndView.swift; sourceTree = "<group>"; };
+		3C1AA18B2BE2093D0046C222 /* TimerActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActionView.swift; sourceTree = "<group>"; };
+		3C2598F02BE1C68E002DF40C /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		3C2598F22BE1D060002DF40C /* FastingSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingSettingView.swift; sourceTree = "<group>"; };
+		3C2598FB2BE1DB7F002DF40C /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		7F6D9A352BE0D3E800159A02 /* Hellth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hellth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6D9A382BE0D3E800159A02 /* HellthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HellthApp.swift; sourceTree = "<group>"; };
 		7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,10 +76,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2598ED2BE1C664002DF40C /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				3C2598EF2BE1C679002DF40C /* Features */,
+				3C2598EE2BE1C671002DF40C /* Views */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		3C2598EE2BE1C671002DF40C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C2598F02BE1C68E002DF40C /* TimerView.swift */,
+				3C2598F22BE1D060002DF40C /* FastingSettingView.swift */,
+				3C1AA18B2BE2093D0046C222 /* TimerActionView.swift */,
+				3C186A0B2BE47826006966B7 /* FastingEndView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3C2598EF2BE1C679002DF40C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		7F6D9A2C2BE0D3E800159A02 = {
 			isa = PBXGroup;
 			children = (
-				7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */,
 				7F6D9A372BE0D3E800159A02 /* Hellth */,
 				7F6D9A362BE0D3E800159A02 /* Products */,
 				7FCC47182BE360F0005A2DAB /* Frameworks */,
@@ -87,7 +126,9 @@
 				7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */,
 				7F6D9A382BE0D3E800159A02 /* HellthApp.swift */,
 				7FCC46CB2BE0F156005A2DAB /* Home */,
+				3C2598ED2BE1C664002DF40C /* Timer */,
 				7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */,
+				3C2598FB2BE1DB7F002DF40C /* GoogleService-Info-2.plist */,
 				7F6D9A3E2BE0D3EA00159A02 /* Preview Content */,
 			);
 			path = Hellth;
@@ -211,6 +252,7 @@
 			files = (
 				7F6D9A402BE0D3EA00159A02 /* Preview Assets.xcassets in Resources */,
 				7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */,
+				3C2598FC2BE1DB7F002DF40C /* GoogleService-Info-2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +285,6 @@
 /* Begin XCBuildConfiguration section */
 		7F6D9A412BE0D3EA00159A02 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -307,7 +348,6 @@
 		};
 		7F6D9A422BE0D3EA00159A02 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -370,7 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hellth/Preview Content\"";
-				DEVELOPMENT_TEAM = TU8YV9MV8Q;
+				DEVELOPMENT_TEAM = B8D5M6C29N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -399,7 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hellth/Preview Content\"";
-				DEVELOPMENT_TEAM = TU8YV9MV8Q;
+				DEVELOPMENT_TEAM = B8D5M6C29N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
