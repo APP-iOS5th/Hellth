@@ -80,9 +80,9 @@ class CommentService: ObservableObject {
         }
     }
     
-    func deleteComment() async {
+    func deleteComment(docId: String) async {
         do {
-          try await dbCollection.document().delete()
+          try await dbCollection.document("\(docId)").delete()
           print("Document successfully removed!")
         } catch {
           print("Error removing document: \(error)")

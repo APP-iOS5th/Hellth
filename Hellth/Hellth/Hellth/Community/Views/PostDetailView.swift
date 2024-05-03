@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PostDetailView: View {
     @StateObject var commentService: CommentService
+    @StateObject var postService: PostsService = PostsService()
     var post: Post
     
     init(post: Post) {
@@ -28,12 +29,31 @@ struct PostDetailView: View {
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                // 카테고리
-                
-                // 글제목 
-                Text("\(post.title)")
-                    .font(.title)
-                    .bold()
+                HStack {
+                    // 글제목
+                    Text("\(post.title)")
+                        .font(.title)
+                        .bold()
+                    // 게시글 삭제
+                    Button {
+                        showingAlert = true
+                    } label: {
+                        Text("···")
+                    }
+                    .alert(isPresented: $showingAlert) {
+                        Alert(
+                            title: Text("게시글 삭제"),
+                            message: Text("삭제하시겠습니까?"),
+                            primaryButton: .destructive(Text("확인")) {
+                                // 삭제
+                                Task {
+                                    await postService.deletePost(post: <#T##Post#>)
+                                }
+                            },
+                            secondaryButton: .cancel(Text("취소"))
+                        )
+                    }
+                }
                 HStack {
                     // 사용자 정보, 작성 시간
                     AsyncImage(url: post.photoURL) { image in
@@ -101,7 +121,7 @@ struct PostDetailView: View {
                                         primaryButton: .destructive(Text("확인")) {
                                             // 삭제
                                             Task {
-                                                await commentService.deleteComment()
+                                                await commentService.deleteComment(docId: comment.docId!)
                                             }
                                         },
                                         secondaryButton: .cancel(Text("취소"))
@@ -186,7 +206,7 @@ struct PostDetailView: View {
             .lineLimit(nil)
             .lineSpacing(10)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .navigationTitle("\(post.category)")
+            .navigationTitle("\(post.category)") // 카테고리
             .navigationBarTitleDisplayMode(.inline)
             }
         
