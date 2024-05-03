@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		75EBB0222BE1DA1F00672476 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 75EBB0212BE1DA1F00672476 /* GoogleSignIn */; };
 		75EBB0242BE1DA1F00672476 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 75EBB0232BE1DA1F00672476 /* GoogleSignInSwift */; };
+		75EC12C52BE3687700049662 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75EC12C42BE3687700049662 /* GoogleService-Info.plist */; };
+		75EC12C82BE3699D00049662 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 75EC12C72BE3699D00049662 /* FirebaseAuth */; };
 		7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A382BE0D3E800159A02 /* HellthApp.swift */; };
 		7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */; };
 		7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75EC12C32BE3577C00049662 /* Hellth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hellth.entitlements; sourceTree = "<group>"; };
+		75EC12C42BE3687700049662 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F6D9A352BE0D3E800159A02 /* Hellth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hellth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6D9A382BE0D3E800159A02 /* HellthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HellthApp.swift; sourceTree = "<group>"; };
 		7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +37,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75EBB0222BE1DA1F00672476 /* GoogleSignIn in Frameworks */,
+				75EC12C82BE3699D00049662 /* FirebaseAuth in Frameworks */,
 				75EBB0242BE1DA1F00672476 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,11 +45,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75EC12C62BE3699D00049662 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F6D9A2C2BE0D3E800159A02 = {
 			isa = PBXGroup;
 			children = (
 				7F6D9A372BE0D3E800159A02 /* Hellth */,
 				7F6D9A362BE0D3E800159A02 /* Products */,
+				75EC12C62BE3699D00049662 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,10 +72,12 @@
 		7F6D9A372BE0D3E800159A02 /* Hellth */ = {
 			isa = PBXGroup;
 			children = (
+				75EC12C32BE3577C00049662 /* Hellth.entitlements */,
 				7F6D9A382BE0D3E800159A02 /* HellthApp.swift */,
 				7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */,
 				7FCC46CB2BE0F156005A2DAB /* Home */,
 				7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */,
+				75EC12C42BE3687700049662 /* GoogleService-Info.plist */,
 				7F6D9A3E2BE0D3EA00159A02 /* Preview Content */,
 			);
 			path = Hellth;
@@ -120,6 +135,7 @@
 			packageProductDependencies = (
 				75EBB0212BE1DA1F00672476 /* GoogleSignIn */,
 				75EBB0232BE1DA1F00672476 /* GoogleSignInSwift */,
+				75EC12C72BE3699D00049662 /* FirebaseAuth */,
 			);
 			productName = Hellth;
 			productReference = 7F6D9A352BE0D3E800159A02 /* Hellth.app */;
@@ -169,6 +185,7 @@
 			files = (
 				7F6D9A402BE0D3EA00159A02 /* Preview Assets.xcassets in Resources */,
 				7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */,
+				75EC12C52BE3687700049662 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Hellth/Hellth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hellth/Preview Content\"";
@@ -342,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Hellth/Hellth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hellth/Preview Content\"";
@@ -418,6 +437,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 75EBB0202BE1DA1F00672476 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		75EC12C72BE3699D00049662 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75EBB01F2BE1D82600672476 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
