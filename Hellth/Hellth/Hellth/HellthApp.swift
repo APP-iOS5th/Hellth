@@ -1,10 +1,10 @@
 import SwiftUI
 import Firebase
 import GoogleSignIn
+import FirebaseCore
 
 // 파이어베이스 연결 초기화
 class AppDelegate: NSObject, UIApplicationDelegate {
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
         return true
@@ -23,6 +23,7 @@ struct HellthApp: App {
         WindowGroup {
             ContentView()
 //            PostsListView()
+//            TimerView()
         }
     }
 }
