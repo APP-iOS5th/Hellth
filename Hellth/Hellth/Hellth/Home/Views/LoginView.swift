@@ -3,7 +3,7 @@ import SwiftUI
 import AuthenticationServices
 
 
-struct HomeView: View {
+struct LoginView: View {
     @State private var userName: String = ""
     @State private var userEmail: String = ""
 
@@ -90,5 +90,5 @@ struct HomeView: View {
     }
 }
 #Preview {
-    HomeView()
+    LoginView()
 }

@@ -5,7 +5,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TabView {
-                HomeView()
+                LoginView()
                     .tabItem {
                         Label("Home", systemImage: "house")
                         
