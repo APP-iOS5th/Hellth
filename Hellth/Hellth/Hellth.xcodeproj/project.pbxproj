@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,20 @@
 		7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */; };
 		7F6D9A402BE0D3EA00159A02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3F2BE0D3EA00159A02 /* Preview Assets.xcassets */; };
 		7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */; };
-		7FCC46D32BE0F275005A2DAB /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46D22BE0F275005A2DAB /* HomeModel.swift */; };
+		7FCC46FA2BE20E28005A2DAB /* CalorieNutrientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */; };
+		7FCC46FC2BE21CB2005A2DAB /* AddCalorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46FB2BE21CB2005A2DAB /* AddCalorieView.swift */; };
+		7FCC46FE2BE22B77005A2DAB /* CalorieCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */; };
+		7FCC47082BE31928005A2DAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC47072BE31928005A2DAB /* Extensions.swift */; };
+		7FCC470A2BE322BE005A2DAB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC47092BE322BE005A2DAB /* Model.swift */; };
+		7FCC470C2BE32345005A2DAB /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC470B2BE32345005A2DAB /* FoodRow.swift */; };
+		7FCC470E2BE3247B005A2DAB /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC470D2BE3247B005A2DAB /* FoodList.swift */; };
+		7FCC47132BE338BD005A2DAB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7FCC47122BE338BD005A2DAB /* FirebaseFirestore */; };
+		7FCC47152BE338BD005A2DAB /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FCC47142BE338BD005A2DAB /* FirebaseFirestoreSwift */; };
+		7FCC471A2BE360F0005A2DAB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7FCC47192BE360F0005A2DAB /* FirebaseAuth */; };
+		7FCC471C2BE38735005A2DAB /* TotalCalorieSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC471B2BE38735005A2DAB /* TotalCalorieSettingView.swift */; };
+		7FCC47202BE3E2E6005A2DAB /* FoodManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC471F2BE3E2E6005A2DAB /* FoodManager.swift */; };
+		7FCC47222BE3E306005A2DAB /* CalorieInTakeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC47212BE3E306005A2DAB /* CalorieInTakeManager.swift */; };
+		7FCC47242BE3E31B005A2DAB /* CalorieNutrientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCC47232BE3E31B005A2DAB /* CalorieNutrientsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +37,18 @@
 		7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F6D9A3F2BE0D3EA00159A02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		7FCC46D22BE0F275005A2DAB /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		7FCC46D42BE0FE96005A2DAB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieNutrientView.swift; sourceTree = "<group>"; };
+		7FCC46FB2BE21CB2005A2DAB /* AddCalorieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCalorieView.swift; sourceTree = "<group>"; };
+		7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCircleView.swift; sourceTree = "<group>"; };
+		7FCC47072BE31928005A2DAB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7FCC47092BE322BE005A2DAB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7FCC470B2BE32345005A2DAB /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
+		7FCC470D2BE3247B005A2DAB /* FoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
+		7FCC471B2BE38735005A2DAB /* TotalCalorieSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCalorieSettingView.swift; sourceTree = "<group>"; };
+		7FCC471F2BE3E2E6005A2DAB /* FoodManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodManager.swift; sourceTree = "<group>"; };
+		7FCC47212BE3E306005A2DAB /* CalorieInTakeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieInTakeManager.swift; sourceTree = "<group>"; };
+		7FCC47232BE3E31B005A2DAB /* CalorieNutrientsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieNutrientsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FCC47132BE338BD005A2DAB /* FirebaseFirestore in Frameworks */,
+				7FCC471A2BE360F0005A2DAB /* FirebaseAuth in Frameworks */,
+				7FCC47152BE338BD005A2DAB /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +94,7 @@
 			children = (
 				7F6D9A372BE0D3E800159A02 /* Hellth */,
 				7F6D9A362BE0D3E800159A02 /* Products */,
+				7FCC47182BE360F0005A2DAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,9 +109,8 @@
 		7F6D9A372BE0D3E800159A02 /* Hellth */ = {
 			isa = PBXGroup;
 			children = (
-				3C2598ED2BE1C664002DF40C /* Timer */,
-				7F6D9A382BE0D3E800159A02 /* HellthApp.swift */,
 				7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */,
+				7F6D9A382BE0D3E800159A02 /* HellthApp.swift */,
 				7FCC46CB2BE0F156005A2DAB /* Home */,
 				7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */,
 				7F6D9A3E2BE0D3EA00159A02 /* Preview Content */,
@@ -111,7 +138,13 @@
 		7FCC46CC2BE0F16C005A2DAB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7FCC46FB2BE21CB2005A2DAB /* AddCalorieView.swift */,
+				7FCC46F92BE20E28005A2DAB /* CalorieNutrientView.swift */,
+				7FCC46FD2BE22B77005A2DAB /* CalorieCircleView.swift */,
+				7FCC470D2BE3247B005A2DAB /* FoodList.swift */,
+				7FCC470B2BE32345005A2DAB /* FoodRow.swift */,
 				7FCC46CE2BE0F1C1005A2DAB /* HomeView.swift */,
+				7FCC471B2BE38735005A2DAB /* TotalCalorieSettingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,9 +152,20 @@
 		7FCC46CD2BE0F191005A2DAB /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				7FCC46D22BE0F275005A2DAB /* HomeModel.swift */,
+				7FCC47092BE322BE005A2DAB /* Model.swift */,
+				7FCC47212BE3E306005A2DAB /* CalorieInTakeManager.swift */,
+				7FCC47232BE3E31B005A2DAB /* CalorieNutrientsManager.swift */,
+				7FCC471F2BE3E2E6005A2DAB /* FoodManager.swift */,
+				7FCC47072BE31928005A2DAB /* Extensions.swift */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		7FCC47182BE360F0005A2DAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +184,11 @@
 			dependencies = (
 			);
 			name = Hellth;
+			packageProductDependencies = (
+				7FCC47122BE338BD005A2DAB /* FirebaseFirestore */,
+				7FCC47142BE338BD005A2DAB /* FirebaseFirestoreSwift */,
+				7FCC47192BE360F0005A2DAB /* FirebaseAuth */,
+			);
 			productName = Hellth;
 			productReference = 7F6D9A352BE0D3E800159A02 /* Hellth.app */;
 			productType = "com.apple.product-type.application";
@@ -160,7 +209,7 @@
 				};
 			};
 			buildConfigurationList = 7F6D9A302BE0D3E800159A02 /* Build configuration list for PBXProject "Hellth" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -168,6 +217,9 @@
 				Base,
 			);
 			mainGroup = 7F6D9A2C2BE0D3E800159A02;
+			packageReferences = (
+				7FCC47112BE338BD005A2DAB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 7F6D9A362BE0D3E800159A02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,10 +246,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C2598F12BE1C68E002DF40C /* TimerView.swift in Sources */,
-				7FCC46D32BE0F275005A2DAB /* HomeModel.swift in Sources */,
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
+				7FCC470A2BE322BE005A2DAB /* Model.swift in Sources */,
+				7FCC47202BE3E2E6005A2DAB /* FoodManager.swift in Sources */,
+				7FCC470C2BE32345005A2DAB /* FoodRow.swift in Sources */,
+				7FCC47242BE3E31B005A2DAB /* CalorieNutrientsManager.swift in Sources */,
+				7FCC47222BE3E306005A2DAB /* CalorieInTakeManager.swift in Sources */,
+				7FCC471C2BE38735005A2DAB /* TotalCalorieSettingView.swift in Sources */,
+				7FCC46FC2BE21CB2005A2DAB /* AddCalorieView.swift in Sources */,
 				7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */,
+				7FCC46FA2BE20E28005A2DAB /* CalorieNutrientView.swift in Sources */,
+				7FCC46FE2BE22B77005A2DAB /* CalorieCircleView.swift in Sources */,
+				7FCC470E2BE3247B005A2DAB /* FoodList.swift in Sources */,
+				7FCC47082BE31928005A2DAB /* Extensions.swift in Sources */,
 				7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +465,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7FCC47112BE338BD005A2DAB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7FCC47122BE338BD005A2DAB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FCC47112BE338BD005A2DAB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		7FCC47142BE338BD005A2DAB /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FCC47112BE338BD005A2DAB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		7FCC47192BE360F0005A2DAB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FCC47112BE338BD005A2DAB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F6D9A2D2BE0D3E800159A02 /* Project object */;
 }
