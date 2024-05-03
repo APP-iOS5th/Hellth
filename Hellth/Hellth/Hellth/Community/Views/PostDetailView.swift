@@ -18,7 +18,9 @@ struct PostDetailView: View {
     }
     
     @State private var inputComment: String = ""
-    @State private var showingAlert: Bool = false
+    @State private var showingPostAlert: Bool = false
+    @State private var showingCommentAlert: Bool = false
+    @Environment(\.dismiss) var dismiss
     
     private let dateFormat: DateFormatter = {
         let formatter = DateFormatter()
@@ -34,20 +36,23 @@ struct PostDetailView: View {
                     Text("\(post.title)")
                         .font(.title)
                         .bold()
+                    Spacer()
                     // 게시글 삭제
                     Button {
-                        showingAlert = true
+                        showingPostAlert = true
                     } label: {
                         Text("···")
                     }
-                    .alert(isPresented: $showingAlert) {
+                    .buttonStyle(.plain)
+                    .alert(isPresented: $showingPostAlert) {
                         Alert(
                             title: Text("게시글 삭제"),
                             message: Text("삭제하시겠습니까?"),
                             primaryButton: .destructive(Text("확인")) {
                                 // 삭제
                                 Task {
-                                    await postService.deletePost(post: <#T##Post#>)
+                                    await postService.deletePost(postId: post.docId!)
+                                    dismiss()
                                 }
                             },
                             secondaryButton: .cancel(Text("취소"))
@@ -110,11 +115,11 @@ struct PostDetailView: View {
                                 Spacer()
                                 // 댓글 삭제
                                 Button {
-                                    showingAlert = true
+                                    showingCommentAlert = true
                                 } label: {
                                     Text("···")
                                 }
-                                .alert(isPresented: $showingAlert) {
+                                .alert(isPresented: $showingCommentAlert) {
                                     Alert(
                                         title: Text("댓글 삭제"),
                                         message: Text("삭제하시겠습니까?"),
@@ -144,7 +149,7 @@ struct PostDetailView: View {
                                         .foregroundStyle(Color(.systemGray))
                                 }
                                 
-                                
+
                                 // 대댓글 수(버튼)
                                 Button {
                                     
@@ -214,6 +219,6 @@ struct PostDetailView: View {
     
 }
 
-#Preview {
-    PostDetailView(post: Post.sample[0])
-}
+//#Preview {
+//    PostDetailView(post: Post.sample[0])
+//}

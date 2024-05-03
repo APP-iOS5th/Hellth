@@ -71,6 +71,21 @@ class PostsService: ObservableObject {
         _ = try? dbCollection.addDocument(from: post)
         fetch()
     }
-
+    
+    func deletePost(postId: String) async {
+        do {
+            let postRef = dbCollection.document(postId)
+            let commentsCollection = try await postRef.collection("comments").getDocuments()
+            
+            for document in commentsCollection.documents {
+                try await document.reference.delete()
+            }
+            
+            try await postRef.delete()
+            print("Document successfully removed!")
+        } catch {
+              print("Error removing document: \(error)")
+        }
+    }
 }
 
