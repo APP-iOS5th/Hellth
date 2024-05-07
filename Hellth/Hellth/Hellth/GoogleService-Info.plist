@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDir84AcC7zGFS5gQhmyXJSI_Zve7HhjTk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>242908630955</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ko.co.Hellth</string>
+	<key>PROJECT_ID</key>
+	<string>hellthapp-50f58</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hellthapp-50f58.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:242908630955:ios:70235e7264123360d80cee</string>
+</dict>
+</plist>

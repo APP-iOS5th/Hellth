@@ -15,8 +15,7 @@ struct ContentView: View {
                         Label("Community", systemImage: "square.grid.2x2")
                         
                     }
-                
-                Text("Timer")
+                TimerView()
                     .tabItem {
                         Label("Timer", systemImage: "clock")
                         
