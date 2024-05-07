@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58972B6D2BEA63E4005DA53B /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B6C2BEA63E4005DA53B /* PostListView.swift */; };
+		58972B6D2BEA63E4005DA53B /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B6C2BEA63E4005DA53B /* PostsListView.swift */; };
 		58972B6F2BEA63FD005DA53B /* PostSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B6E2BEA63FD005DA53B /* PostSummaryView.swift */; };
 		58972B712BEA6408005DA53B /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B702BEA6408005DA53B /* PostDetailView.swift */; };
 		58972B732BEA6418005DA53B /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B722BEA6418005DA53B /* AddPostView.swift */; };
 		58972B752BEA6427005DA53B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B742BEA6427005DA53B /* CommentView.swift */; };
+		58972B772BEA64CE005DA53B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B762BEA64CE005DA53B /* Post.swift */; };
+		58972B792BEA6506005DA53B /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B782BEA6506005DA53B /* PostsService.swift */; };
+		58972B7B2BEA6528005DA53B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B7A2BEA6528005DA53B /* Comment.swift */; };
+		58972B7D2BEA6549005DA53B /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B7C2BEA6549005DA53B /* CommentService.swift */; };
 		7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A382BE0D3E800159A02 /* HellthApp.swift */; };
 		7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */; };
 		7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6D9A3C2BE0D3EA00159A02 /* Assets.xcassets */; };
@@ -39,11 +43,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		58972B6C2BEA63E4005DA53B /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		58972B6C2BEA63E4005DA53B /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
 		58972B6E2BEA63FD005DA53B /* PostSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSummaryView.swift; sourceTree = "<group>"; };
 		58972B702BEA6408005DA53B /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		58972B722BEA6418005DA53B /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
 		58972B742BEA6427005DA53B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		58972B762BEA64CE005DA53B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		58972B782BEA6506005DA53B /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
+		58972B7A2BEA6528005DA53B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		58972B7C2BEA6549005DA53B /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		7F6D9A352BE0D3E800159A02 /* Hellth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hellth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6D9A382BE0D3E800159A02 /* HellthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HellthApp.swift; sourceTree = "<group>"; };
 		7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +102,10 @@
 		58972B6A2BEA6365005DA53B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				58972B762BEA64CE005DA53B /* Post.swift */,
+				58972B782BEA6506005DA53B /* PostsService.swift */,
+				58972B7A2BEA6528005DA53B /* Comment.swift */,
+				58972B7C2BEA6549005DA53B /* CommentService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,7 +113,7 @@
 		58972B6B2BEA6373005DA53B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				58972B6C2BEA63E4005DA53B /* PostListView.swift */,
+				58972B6C2BEA63E4005DA53B /* PostsListView.swift */,
 				58972B6E2BEA63FD005DA53B /* PostSummaryView.swift */,
 				58972B702BEA6408005DA53B /* PostDetailView.swift */,
 				58972B722BEA6418005DA53B /* AddPostView.swift */,
@@ -285,6 +297,8 @@
 				7FEA0EDD2BEA27CE0066B76F /* TimerView.swift in Sources */,
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
 				7FEA0EC52BEA26C00066B76F /* FoodManager.swift in Sources */,
+				58972B772BEA64CE005DA53B /* Post.swift in Sources */,
+				58972B7D2BEA6549005DA53B /* CommentService.swift in Sources */,
 				7FEA0ED32BEA27420066B76F /* AddCalorieView.swift in Sources */,
 				58972B752BEA6427005DA53B /* CommentView.swift in Sources */,
 				7FEA0EC32BEA26B80066B76F /* Extensions.swift in Sources */,
@@ -292,15 +306,17 @@
 				7FEA0EC92BEA270B0066B76F /* FoodList.swift in Sources */,
 				7FEA0ED12BEA27370066B76F /* CalorieCircleView.swift in Sources */,
 				7F6D9A3B2BE0D3E800159A02 /* ContentView.swift in Sources */,
-				58972B6D2BEA63E4005DA53B /* PostListView.swift in Sources */,
+				58972B6D2BEA63E4005DA53B /* PostsListView.swift in Sources */,
 				7FEA0ED92BEA27B80066B76F /* FastingSettingView.swift in Sources */,
 				58972B6F2BEA63FD005DA53B /* PostSummaryView.swift in Sources */,
 				7F6D9A392BE0D3E800159A02 /* HellthApp.swift in Sources */,
+				58972B792BEA6506005DA53B /* PostsService.swift in Sources */,
 				7FEA0EBF2BEA26870066B76F /* CalorieInTakeManager.swift in Sources */,
 				7FEA0EC12BEA26A80066B76F /* CalorieNutrientsManager.swift in Sources */,
 				7FEA0ECB2BEA27130066B76F /* FoodRow.swift in Sources */,
 				58972B732BEA6418005DA53B /* AddPostView.swift in Sources */,
 				7FEA0EC72BEA26CA0066B76F /* Model.swift in Sources */,
+				58972B7B2BEA6528005DA53B /* Comment.swift in Sources */,
 				7FEA0ED72BEA27AD0066B76F /* FastingEndView.swift in Sources */,
 				58972B712BEA6408005DA53B /* PostDetailView.swift in Sources */,
 				7FEA0EDB2BEA27C40066B76F /* TimerActionView.swift in Sources */,
