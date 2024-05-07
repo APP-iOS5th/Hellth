@@ -72,11 +72,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58972B692BEA6132005DA53B /* New Group */ = {
+		58972B692BEA6132005DA53B /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				58972B6B2BEA6373005DA53B /* Views */,
+				58972B6A2BEA6365005DA53B /* Models */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		58972B6A2BEA6365005DA53B /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58972B6B2BEA6373005DA53B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7F6D9A2C2BE0D3E800159A02 = {
@@ -98,7 +114,7 @@
 		7F6D9A372BE0D3E800159A02 /* Hellth */ = {
 			isa = PBXGroup;
 			children = (
-				58972B692BEA6132005DA53B /* New Group */,
+				58972B692BEA6132005DA53B /* Community */,
 				7F6D9A382BE0D3E800159A02 /* HellthApp.swift */,
 				7F6D9A3A2BE0D3E800159A02 /* ContentView.swift */,
 				7FCC46CB2BE0F156005A2DAB /* Home */,
