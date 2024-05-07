@@ -137,4 +137,10 @@ xcuserdata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 **/GoogleService-Info.plist
+# Xcode user-specific workspace settings
+Hellth/Hellth/Hellth.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Ignore all user-specific files in Xcode project
+*.xcuserstate
+
 # End of https://www.toptal.com/developers/gitignore/api/xcode,macos,swift,swiftpackagemanager
