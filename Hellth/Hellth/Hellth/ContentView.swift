@@ -10,7 +10,7 @@ struct ContentView: View {
                         Label("Home", systemImage: "house")
                         
                     }
-                Text("Community")
+                PostsListView()
                     .tabItem {
                         Label("Community", systemImage: "square.grid.2x2")
                         
