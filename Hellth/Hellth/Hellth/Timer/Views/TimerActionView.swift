@@ -39,6 +39,11 @@ struct TimerActionView: View {
                     }, label: {
                         Text("단식 종료")
                     })
+                    .simultaneousGesture(TapGesture().onEnded {
+                        self.timer.upstream.connect().cancel()
+                        fastingManager.addFasting(remainingSeconds: remainingSeconds,  durationSeconds: durationSeconds,  passedSeconds: passedSeconds, isFasting: isFasting, startDateTime: startDateTime, durationHour: durationHour
+                        )
+                    })
                 }
             }
             .onReceive(timer){ _ in
@@ -57,11 +62,6 @@ struct TimerActionView: View {
                 remainingSeconds = startDateTime.timeIntervalSince(Date())
                 durationSeconds = durationHour * 3600
                 
-            })
-            .onDisappear(perform: {
-                self.timer.upstream.connect().cancel()
-                fastingManager.addFasting(remainingSeconds: remainingSeconds,  durationSeconds: durationSeconds,  passedSeconds: passedSeconds, isFasting: isFasting, startDateTime: startDateTime, durationHour: durationHour
-                )
             })
         }
     }
