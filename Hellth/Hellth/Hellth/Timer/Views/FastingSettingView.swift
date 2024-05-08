@@ -11,7 +11,6 @@ struct FastingSettingView: View {
     @State private var startHour = 0
     @State private var startMinute = 0
     @State private var durationHour = 0
-    
     private var currentDateTime = Date.now
     
     private func oneMonthFromToday() -> Date {

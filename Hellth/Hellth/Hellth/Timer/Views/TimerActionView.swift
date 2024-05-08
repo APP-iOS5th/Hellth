@@ -14,6 +14,7 @@ struct TimerActionView: View {
     @State private var durationSeconds: Int = 0
     @State private var passedSeconds: Int = 0
     @State private var isFasting: Bool = false
+    @StateObject private var fastingManager:FastingManager = FastingManager()
     
     let dateTimeFormatter = DateFormatter()
     
@@ -59,6 +60,8 @@ struct TimerActionView: View {
             })
             .onDisappear(perform: {
                 self.timer.upstream.connect().cancel()
+                fastingManager.addFasting(remainingSeconds: remainingSeconds,  durationSeconds: durationSeconds,  passedSeconds: passedSeconds, isFasting: isFasting, startDateTime: startDateTime, durationHour: durationHour
+                )
             })
         }
     }

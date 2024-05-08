@@ -82,3 +82,22 @@ extension CalorieNutrients {
     ]
     
 }
+
+struct Fasting: Identifiable, Codable, Hashable {
+    @DocumentID var id: String?
+    var remainingSeconds: Double
+    var durationSeconds: Int
+    var passedSeconds: Int
+    var isFasting: Bool
+    var startDateTime: Date
+    var durationHour: Int
+
+    init(remainingSeconds: Double, durationSeconds: Int, passedSeconds: Int, isFasting: Bool, startDateTime: Date, durationHour: Int) {
+        self.remainingSeconds = remainingSeconds
+        self.durationSeconds = durationSeconds
+        self.passedSeconds = passedSeconds
+        self.isFasting = isFasting
+        self.startDateTime = startDateTime
+        self.durationHour = durationHour
+    }
+}
