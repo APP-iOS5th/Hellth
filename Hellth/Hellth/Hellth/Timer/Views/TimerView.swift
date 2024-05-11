@@ -12,9 +12,9 @@ struct TimerView: View {
             NavigationLink(destination: FastingSettingView()) {
                 Text("단식 타이머 만들기")
                     .font(.title)
-                    .padding()
+                    .padding(10)
                     .foregroundStyle(.white)
-                    .background(RoundedRectangle(cornerRadius: 15, style: .circular).fill(.green))
+                    .background(RoundedRectangle(cornerRadius: 15, style: .circular))
                 
             }
             .navigationTitle("단식 타이머")

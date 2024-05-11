@@ -13,7 +13,7 @@ struct FastingEndView: View {
     var body: some View {
         //        NavigationStack {
         VStack {
-            Text("딘식 실시 시간")
+            Text("단식 실시 시간")
                 .font(.title)
             Text("\(fastingTime)")
                 .kerning(3)
@@ -33,9 +33,9 @@ struct FastingEndView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 NavigationLink(destination: {
-                    TimerView()
+                    FastingRecords()
                 }, label: {
-                    Text("단식 타이머 만들기")
+                    Text("단식 기록")
                 })
             }
         }

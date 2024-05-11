@@ -27,7 +27,7 @@ struct FastingSettingView: View {
                 VStack {
                     Section(header:
                                 Text("시작 날짜")
-                        .font(.title3)
+                        .font(.headline)
                         .fontWeight(.bold)
                     ) {
                         DatePicker("Selcted Date", selection: $startDate, in: Date()...oneMonthFromToday(), displayedComponents: .date)
@@ -41,7 +41,7 @@ struct FastingSettingView: View {
                     }
                     Section(header:
                                 Text("시작 시간")
-                        .font(.title3)
+                        .font(.headline)
                         .fontWeight(.bold)
                     ) {
                         VStack {
@@ -74,7 +74,7 @@ struct FastingSettingView: View {
                     }
                     Section(header:
                                 Text("단식 유지 시간")
-                        .font(.title3)
+                        .font(.headline)
                         .fontWeight(.bold)
                     ) {
                         HStack {
@@ -94,6 +94,7 @@ struct FastingSettingView: View {
                     Spacer()
                 }
                 .navigationTitle("단식 계획 설정")
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         NavigationLink(destination: {
