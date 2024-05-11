@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C19CA822BEB0E0C000B4DF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FEA0EE52BEA293B0066B76F /* GoogleService-Info.plist */; };
+		3CBEC1652BEAA1110025A596 /* FastingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBEC1642BEAA1110025A596 /* FastingManager.swift */; };
+		3CDB92CD2BEEA6890039D523 /* FastingRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB92CC2BEEA6890039D523 /* FastingRecords.swift */; };
 		58972B6D2BEA63E4005DA53B /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B6C2BEA63E4005DA53B /* PostsListView.swift */; };
 		58972B6F2BEA63FD005DA53B /* PostSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B6E2BEA63FD005DA53B /* PostSummaryView.swift */; };
 		58972B712BEA6408005DA53B /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58972B702BEA6408005DA53B /* PostDetailView.swift */; };
@@ -39,10 +42,11 @@
 		7FEA0EE02BEA28B70066B76F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7FEA0EDF2BEA28B70066B76F /* FirebaseAuth */; };
 		7FEA0EE22BEA28B70066B76F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7FEA0EE12BEA28B70066B76F /* FirebaseFirestore */; };
 		7FEA0EE42BEA28B70066B76F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FEA0EE32BEA28B70066B76F /* FirebaseFirestoreSwift */; };
-		7FEA0EE62BEA293B0066B76F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FEA0EE52BEA293B0066B76F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CBEC1642BEAA1110025A596 /* FastingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingManager.swift; sourceTree = "<group>"; };
+		3CDB92CC2BEEA6890039D523 /* FastingRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingRecords.swift; sourceTree = "<group>"; };
 		58972B6C2BEA63E4005DA53B /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
 		58972B6E2BEA63FD005DA53B /* PostSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSummaryView.swift; sourceTree = "<group>"; };
 		58972B702BEA6408005DA53B /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 				7FEA0EC02BEA26A80066B76F /* CalorieNutrientsManager.swift */,
 				7FEA0EC22BEA26B80066B76F /* Extensions.swift */,
 				7FEA0EC42BEA26C00066B76F /* FoodManager.swift */,
+				3CBEC1642BEAA1110025A596 /* FastingManager.swift */,
 				7FEA0EC62BEA26CA0066B76F /* Model.swift */,
 			);
 			path = Managers;
@@ -207,10 +212,11 @@
 		7FEA0ED52BEA27930066B76F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7FEA0ED62BEA27AD0066B76F /* FastingEndView.swift */,
+				7FEA0EDC2BEA27CE0066B76F /* TimerView.swift */,
 				7FEA0ED82BEA27B80066B76F /* FastingSettingView.swift */,
 				7FEA0EDA2BEA27C40066B76F /* TimerActionView.swift */,
-				7FEA0EDC2BEA27CE0066B76F /* TimerView.swift */,
+				7FEA0ED62BEA27AD0066B76F /* FastingEndView.swift */,
+				3CDB92CC2BEEA6890039D523 /* FastingRecords.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,8 +287,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C19CA822BEB0E0C000B4DF8 /* GoogleService-Info.plist in Resources */,
 				7F6D9A402BE0D3EA00159A02 /* Preview Assets.xcassets in Resources */,
-				7FEA0EE62BEA293B0066B76F /* GoogleService-Info.plist in Resources */,
 				7F6D9A3D2BE0D3EA00159A02 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +302,7 @@
 			files = (
 				7FEA0EDD2BEA27CE0066B76F /* TimerView.swift in Sources */,
 				7FCC46CF2BE0F1C1005A2DAB /* HomeView.swift in Sources */,
+				3CBEC1652BEAA1110025A596 /* FastingManager.swift in Sources */,
 				7FEA0EC52BEA26C00066B76F /* FoodManager.swift in Sources */,
 				58972B772BEA64CE005DA53B /* Post.swift in Sources */,
 				58972B7D2BEA6549005DA53B /* CommentService.swift in Sources */,
@@ -317,6 +324,7 @@
 				58972B732BEA6418005DA53B /* AddPostView.swift in Sources */,
 				7FEA0EC72BEA26CA0066B76F /* Model.swift in Sources */,
 				58972B7B2BEA6528005DA53B /* Comment.swift in Sources */,
+				3CDB92CD2BEEA6890039D523 /* FastingRecords.swift in Sources */,
 				7FEA0ED72BEA27AD0066B76F /* FastingEndView.swift in Sources */,
 				58972B712BEA6408005DA53B /* PostDetailView.swift in Sources */,
 				7FEA0EDB2BEA27C40066B76F /* TimerActionView.swift in Sources */,
